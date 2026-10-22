@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Revise itens e quantidades do carrinho demonstrativo da Loja Xukuru." />
+    <title>Carrinho demonstrativo | Loja Xukuru</title>
+  </head>
+  <body class="min-h-screen bg-sand text-ink">
+    <div class="flex min-h-screen flex-col">
+      <a class="skip-link" href="#main-content">Pular para o conte&#250;do</a>
+      <header class="site-header" data-site-header data-menu-open="false">
+        <div class="site-header__inner">
+          <a class="site-header__brand" href="./index.html" aria-label="Loja Xukuru, in?cio">
+            <span>Loja</span> <span class="site-header__brand-accent">Xukuru</span>
+          </a>
+          <button class="site-header__toggle" type="button" data-menu-toggle aria-controls="site-primary-nav" aria-expanded="false" aria-label="Abrir menu de navega??o">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="site-header__navigation" id="site-primary-nav" aria-label="Navega&#231;&#227;o principal">
+            <ul class="site-header__links">
+              <li><a data-nav-link href="./index.html">In&#237;cio</a></li>
+              <li><a data-nav-link href="./catalogo.html">Cat&#225;logo</a></li>
+              <li><a data-nav-link href="./sobre.html">Sobre</a></li>
+              <li><a data-nav-link href="./historia.html">Hist&#243;ria</a></li>
+            </ul>
+            <form class="site-header__search" action="./catalogo.html" method="get" role="search" aria-label="Buscar no cat&#225;logo">
+              <label class="visually-hidden" for="site-search">Buscar produtos demonstrativos</label>
+              <input id="site-search" name="q" type="search" maxlength="80" placeholder="Buscar produtos demonstrativos..." autocomplete="off" />
+              <button type="submit" aria-label="Buscar">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"></circle><path d="m16 16 4.1 4.1"></path></svg>
+              </button>
+            </form>
+          </nav>
+          <a class="site-header__cart" data-nav-link data-cart-link href="./carrinho.html" aria-label="Carrinho, 0 itens">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 11.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 1.9-1.4L21 8H6"></path><circle cx="9.5" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
+            <span class="site-header__cart-count" data-cart-count aria-hidden="true">0</span>
+          </a>
+        </div>
+      </header>
+      <main id="main-content" class="cart-page mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 lg:py-12" data-cart-page>
+        <nav class="shop-breadcrumb" aria-label="Você está em">
+          <ol>
+            <li><a href="./index.html">Início</a></li>
+            <li aria-current="page">Carrinho</li>
+          </ol>
+        </nav>
+        <section aria-labelledby="cart-title">
+          <p class="shop-kicker">Protótipo demonstrativo</p>
+          <h1 class="shop-page-title" id="cart-title">Seu carrinho</h1>
+          <p class="shop-intro">Os itens e valores abaixo são ilustrativos. Este protótipo não realiza vendas.</p>
+        </section>
+
+        <p class="shop-status" data-cart-status role="status" aria-live="polite">Carregando carrinho…</p>
+        <section class="cart-layout" data-cart-content aria-label="Itens no carrinho" hidden>
+          <div class="cart-items" data-cart-items></div>
+          <aside class="cart-summary" aria-labelledby="cart-summary-title">
+            <h2 id="cart-summary-title">Resumo ilustrativo</h2>
+            <p class="cart-summary__row"><span>Itens</span><strong data-cart-total-items>0 itens</strong></p>
+            <p class="cart-summary__row"><span>Subtotal ilustrativo</span><strong data-cart-subtotal>R$ 0,00</strong></p>
+            <a class="shop-button shop-button--primary cart-summary__checkout" href="./checkout.html">Continuar para o resumo demonstrativo</a>
+            <p class="cart-summary__note">Frete não incluído. Nenhuma cobrança será realizada.</p>
+            <form class="cep-form" data-cep-form novalidate>
+              <div class="shop-field">
+                <label for="cart-cep">CEP para consulta de disponibilidade</label>
+                <input id="cart-cep" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="00000-000" aria-describedby="cep-help cep-message" />
+              </div>
+              <p id="cep-help" class="shop-muted">Informe 8 dígitos. Nenhum valor de frete será calculado.</p>
+              <button class="shop-button shop-button--secondary" type="submit">Consultar CEP</button>
+              <p class="shop-status" id="cep-message" data-cep-message role="status" aria-live="polite"></p>
+            </form>
+            <button class="shop-text-button cart-summary__clear" type="button" data-clear-cart>Limpar carrinho</button>
+          </aside>
+        </section>
+
+        <section class="cart-empty" data-cart-empty aria-labelledby="cart-empty-title" hidden>
+          <div class="cart-empty__mark" aria-hidden="true">＋</div>
+          <h2 id="cart-empty-title">Seu carrinho está vazio</h2>
+          <p>Explore os itens demonstrativos do catálogo para testar esta etapa do protótipo.</p>
+          <a class="shop-button shop-button--primary" href="./catalogo.html">Conhecer o Catálogo</a>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <section class="site-footer__brand" aria-label="Loja Xukuru">
+            <a class="site-footer__logo" href="./index.html">Loja <span>Xukuru</span></a>
+            <p>Uma proposta demonstrativa para explorar comércio justo e valorização do trabalho artesanal.</p>
+          </section>
+          <nav class="site-footer__nav" aria-label="Links rápidos">
+            <h2>Atalhos</h2>
+            <ul>
+              <li><a href="./index.html">Início</a></li>
+              <li><a href="./catalogo.html">Catálogo</a></li>
+              <li><a href="./sobre.html">Sobre</a></li>
+              <li><a href="./historia.html">História</a></li>
+            </ul>
+          </nav>
+          <nav class="site-footer__nav" aria-label="Cultura e leitura">
+            <h2>Cultura &amp; Leitura</h2>
+            <ul>
+              <li><a href="./historia.html">Contextualização sobre o Povo Xukuru</a></li>
+              <li><a href="https://pt.wikipedia.org/wiki/Xucurus" target="_blank" rel="noopener noreferrer">Artigo sobre os Xucurus na Wikipédia ↗</a></li>
+            </ul>
+            <p class="site-footer__note">O link externo é uma referência de leitura geral, não um endosso comunitário.</p>
+          </nav>
+          <aside class="site-footer__notice" aria-label="Limites do protótipo">
+            <p class="site-footer__notice-title">Protótipo demonstrativo</p>
+            <p>Sem venda real. Pagamentos e frete não estão integrados.</p>
+          </aside>
+        </div>
+        <div class="site-footer__bottom">Loja Xukuru · MVP demonstrativo</div>
+      </footer>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/cart-page.js"></script>
+  </body>
+</html>

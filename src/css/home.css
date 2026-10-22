@@ -1,0 +1,542 @@
+.home-page {
+  width: 100%;
+  padding-top: clamp(1.6rem, 3.5vw, 2.8rem);
+  color: var(--color-ink);
+}
+
+.home-page__content {
+  width: min(100%, 75rem);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.home-hero__copy {
+  min-width: 0;
+}
+
+.home-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0 0 1rem;
+  color: var(--color-ink);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.home-hero__copy > .home-eyebrow::after {
+  width: min(7rem, 35%);
+  border-top: 1px solid #877c73;
+  content: '';
+}
+
+.home-hero h1 {
+  max-width: none;
+  margin: 0;
+  color: var(--color-ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.96;
+  text-wrap: balance;
+}
+
+.home-hero h1 span {
+  display: block;
+  color: var(--color-terracotta);
+}
+
+.home-hero__lede {
+  max-width: 48ch;
+  margin: 1rem 0 1.2rem;
+  color: #514740;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.home-button {
+  display: inline-flex;
+  min-height: 2.9rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  border: 1px solid var(--color-forest);
+  background: var(--color-forest);
+  padding: 0.7rem 1rem;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.home-button:hover {
+  background: #173222;
+}
+
+.home-button svg,
+.home-card__add svg {
+  width: 1.3rem;
+  height: 1.3rem;
+  flex: 0 0 auto;
+}
+
+.home-button svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+}
+
+.home-button--compact {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.home-artwork {
+  display: grid;
+  min-width: 0;
+  min-height: 17.5rem;
+  grid-template-columns: minmax(0, 1.35fr) minmax(7.8rem, 0.75fr);
+  align-items: end;
+  margin: 0;
+  background: #f1eae0;
+}
+
+.home-artwork img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 17.5rem;
+  object-fit: cover;
+}
+
+.home-artwork figcaption {
+  display: grid;
+  align-content: center;
+  gap: 0.75rem;
+  padding: 1rem clamp(0.75rem, 2vw, 1.4rem) 1.7rem 0.3rem;
+  color: var(--color-ink);
+}
+
+.home-artwork__rule {
+  width: 2rem;
+  border-top: 1px solid currentColor;
+}
+
+.home-artwork figcaption strong {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.home-artwork figcaption > span:last-child {
+  color: #4d433d;
+  font-size: 0.66rem;
+  font-weight: 650;
+  letter-spacing: 0.15em;
+  line-height: 1.9;
+  text-transform: uppercase;
+}
+
+.home-highlights {
+  padding: 0 0 clamp(1.4rem, 3vw, 2rem);
+}
+
+.home-section-heading {
+  display: grid;
+  grid-template-columns: auto minmax(1.5rem, 1fr) auto;
+  align-items: center;
+  gap: clamp(0.7rem, 2vw, 1.6rem);
+  margin-bottom: 1rem;
+}
+
+.home-section-heading::after {
+  border-top: 1px solid #b9aea4;
+  content: '';
+}
+
+.home-section-heading h2 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.home-section-heading a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.6rem;
+  color: #77371f;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.home-section-heading a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.home-section-heading a svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: none;
+  stroke: var(--color-terracotta);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+}
+
+.home-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.65rem, 1.3vw, 1rem);
+}
+
+.home-card {
+  min-width: 0;
+  border: 1px solid #e0d7cc;
+  background: #fff;
+}
+
+.home-card__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-card__figure {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.48;
+  margin: 0.25rem 0.25rem 0;
+  background: #f1eae0;
+}
+
+.home-card__figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-card__caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(249 246 240 / 94%);
+  padding: 0.4rem 0.45rem;
+  color: #4d433d;
+  font-size: 0.63rem;
+  letter-spacing: 0.15em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.home-card__image-fallback {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  padding: 0.8rem;
+  color: var(--color-ink);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.home-card__content {
+  display: grid;
+  gap: 0.32rem;
+  padding: 0.75rem 0.85rem 0.6rem;
+}
+
+.home-card__category,
+.home-card__price-label {
+  color: #5b514b;
+  font-size: 0.65rem;
+  font-weight: 650;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.home-card__name {
+  color: var(--color-ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1rem, 1.6vw, 1.22rem);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.home-card__link:hover .home-card__name,
+.home-card__link:focus-visible .home-card__name {
+  color: #9b4125;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.home-card__price-label {
+  margin-top: 0.35rem;
+  font-size: 0.61rem;
+  letter-spacing: 0.14em;
+}
+
+.home-card__price {
+  color: var(--color-forest);
+  font-size: 0.98rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.home-card__add {
+  display: flex;
+  width: calc(100% - 1.7rem);
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0 0.85rem 0.85rem;
+  border: 1px solid var(--color-forest);
+  background: var(--color-forest);
+  padding: 0.5rem 0.7rem;
+  color: #fff;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 650;
+  text-align: left;
+  cursor: pointer;
+}
+
+.home-card__add:hover {
+  background: #173222;
+}
+
+.home-card__add svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+}
+
+.home-status {
+  min-height: 1.3rem;
+  margin: 0.8rem 0 0;
+  color: #514740;
+  font-size: 0.86rem;
+}
+
+.home-status:empty {
+  min-height: 0;
+  margin: 0;
+}
+
+.home-state {
+  grid-column: 1 / -1;
+  border: 1px solid #d8cec1;
+  background: #fff;
+  padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+.home-state h3 {
+  margin: 0;
+  color: var(--color-ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.home-state p {
+  max-width: 55ch;
+  margin: 0.6rem 0 1rem;
+  color: #514740;
+  line-height: 1.6;
+}
+
+.home-purpose {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr) minmax(10rem, 0.5fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  background: var(--color-forest);
+  padding: clamp(1.4rem, 3vw, 2rem) max(1rem, calc((100% - 75rem) / 2 + 1rem));
+  color: #fff;
+}
+
+.home-purpose .home-eyebrow {
+  margin-bottom: 0.6rem;
+  color: #fff;
+}
+
+.home-purpose__lead h2 {
+  margin: 0;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.home-purpose > p {
+  max-width: 55ch;
+  margin: 0;
+  color: #f6f5f0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.home-purpose__notice {
+  min-height: 4rem;
+  border-left: 1px solid rgb(255 255 255 / 70%);
+  padding: 0.5rem 0 0.5rem clamp(1rem, 2.5vw, 2rem);
+}
+
+.home-purpose__notice p {
+  margin: 0;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  line-height: 1.9;
+  text-transform: uppercase;
+}
+
+.home-purpose__notice span {
+  display: block;
+  width: 2rem;
+  margin-top: 0.55rem;
+  border-top: 1px solid #f1c696;
+}
+
+@media (max-width: 1050px) {
+  .home-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-purpose {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .home-purpose__notice {
+    grid-column: 1 / -1;
+    min-height: 0;
+    border-top: 1px solid rgb(255 255 255 / 50%);
+    border-left: 0;
+    padding: 0.8rem 0 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .home-hero h1 {
+    max-width: 11ch;
+    font-size: clamp(2.8rem, 12vw, 4.3rem);
+  }
+
+  .home-hero__lede {
+    max-width: 50ch;
+  }
+
+  .home-artwork {
+    min-height: 13.5rem;
+    grid-template-columns: minmax(0, 1.2fr) minmax(7.2rem, 0.8fr);
+  }
+
+  .home-artwork img {
+    min-height: 13.5rem;
+  }
+
+  .home-purpose {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.1rem;
+  }
+
+  .home-purpose__notice {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .home-page {
+    padding-top: 1.25rem;
+  }
+
+  .home-section-heading {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.4rem;
+  }
+
+  .home-section-heading::after {
+    display: none;
+  }
+
+  .home-section-heading h2 {
+    font-size: 1.55rem;
+  }
+
+  .home-section-heading a {
+    gap: 0.3rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+  }
+
+  .home-card-grid {
+    gap: 0.65rem;
+  }
+
+  .home-card__figure {
+    aspect-ratio: 1.2;
+  }
+
+  .home-artwork figcaption strong {
+    font-size: 1rem;
+  }
+
+  .home-artwork figcaption > span:last-child {
+    font-size: 0.58rem;
+    letter-spacing: 0.11em;
+  }
+
+  .home-card__content {
+    padding: 0.65rem 0.6rem 0.55rem;
+  }
+
+  .home-card__name {
+    font-size: 1rem;
+  }
+
+  .home-card__add {
+    width: calc(100% - 1.2rem);
+    margin: 0 0.6rem 0.6rem;
+    padding-inline: 0.5rem;
+    font-size: 0.72rem;
+  }
+}

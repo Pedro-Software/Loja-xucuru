@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conheça o propósito e os limites do protótipo demonstrativo da Loja Xukuru." />
+    <title>Sobre o projeto | Loja Xukuru</title>
+  </head>
+  <body class="min-h-screen bg-sand text-ink">
+    <div class="flex min-h-screen flex-col">
+      <a class="skip-link" href="#main-content">Pular para o conte&#250;do</a>
+      <header class="site-header" data-site-header data-menu-open="false">
+        <div class="site-header__inner">
+          <a class="site-header__brand" href="./index.html" aria-label="Loja Xukuru, in?cio">
+            <span>Loja</span> <span class="site-header__brand-accent">Xukuru</span>
+          </a>
+          <button class="site-header__toggle" type="button" data-menu-toggle aria-controls="site-primary-nav" aria-expanded="false" aria-label="Abrir menu de navega??o">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="site-header__navigation" id="site-primary-nav" aria-label="Navega&#231;&#227;o principal">
+            <ul class="site-header__links">
+              <li><a data-nav-link href="./index.html">In&#237;cio</a></li>
+              <li><a data-nav-link href="./catalogo.html">Cat&#225;logo</a></li>
+              <li><a data-nav-link href="./sobre.html">Sobre</a></li>
+              <li><a data-nav-link href="./historia.html">Hist&#243;ria</a></li>
+            </ul>
+            <form class="site-header__search" action="./catalogo.html" method="get" role="search" aria-label="Buscar no cat&#225;logo">
+              <label class="visually-hidden" for="site-search">Buscar produtos demonstrativos</label>
+              <input id="site-search" name="q" type="search" maxlength="80" placeholder="Buscar produtos demonstrativos..." autocomplete="off" />
+              <button type="submit" aria-label="Buscar">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"></circle><path d="m16 16 4.1 4.1"></path></svg>
+              </button>
+            </form>
+          </nav>
+          <a class="site-header__cart" data-nav-link data-cart-link href="./carrinho.html" aria-label="Carrinho, 0 itens">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 11.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 1.9-1.4L21 8H6"></path><circle cx="9.5" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
+            <span class="site-header__cart-count" data-cart-count aria-hidden="true">0</span>
+          </a>
+        </div>
+      </header>
+      <main id="main-content" class="content-page mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 lg:py-12">
+        <nav class="content-breadcrumb" aria-label="Você está em">
+          <ol>
+            <li><a href="./index.html">Início</a></li>
+            <li aria-current="page">Sobre</li>
+          </ol>
+        </nav>
+
+        <header class="content-hero">
+          <p class="content-eyebrow">Sobre o projeto</p>
+          <h1>Uma proposta em construção</h1>
+          <p class="content-lede">
+            A Loja Xukuru é um MVP demonstrativo para explorar como poderia funcionar uma loja virtual
+            dedicada à valorização do trabalho artesanal e ao comércio justo.
+          </p>
+        </header>
+
+        <section class="content-story-grid" aria-label="Propósito e estado do projeto">
+          <article class="content-story-card content-story-card--lead" aria-labelledby="purpose-title">
+            <p class="content-eyebrow">Propósito</p>
+            <h2 id="purpose-title">Imaginar caminhos para um comércio justo</h2>
+            <p>
+              A intenção é desenvolver uma experiência digital que, se construída com participação e
+              acordos claros, possa contribuir para valorizar o trabalho de artesãos indígenas e apoiar
+              práticas de comércio justo. Neste estágio, isso expressa um objetivo do projeto, não uma
+              atividade comercial em curso.
+            </p>
+          </article>
+
+          <article class="content-story-card" aria-labelledby="prototype-title">
+            <p class="content-eyebrow">Estado atual</p>
+            <h2 id="prototype-title">Um protótipo para apresentação</h2>
+            <p>
+              O MVP demonstra navegação, catálogo, detalhe de produto e carrinho com conteúdo e valores
+              ilustrativos. Não há venda real, pagamento ou cotação de frete integrados.
+            </p>
+          </article>
+        </section>
+
+        <section class="content-principles" aria-labelledby="future-title">
+          <div>
+            <p class="content-eyebrow">Antes de uma operação real</p>
+            <h2 id="future-title">Informação e acordos precisam vir primeiro</h2>
+          </div>
+          <p>
+            Uma etapa comercial futura exigiria diálogo com as pessoas e organizações envolvidas,
+            consentimento para conteúdos e imagens e definição transparente de autoria, remuneração,
+            logística e responsabilidades. Esses vínculos e acordos não estão confirmados neste protótipo.
+          </p>
+        </section>
+
+        <aside class="content-disclaimer" aria-label="Limites da demonstração">
+          <strong>Transparência:</strong> não há parceria, endosso comunitário, catálogo de peças reais,
+          destinação de receitas ou venda confirmados. Os itens apresentados são demonstrativos.
+        </aside>
+
+        <nav class="content-next-links" aria-label="Continue explorando">
+          <a class="content-link-card" href="./catalogo.html">
+            <span>Explorar</span>
+            <strong>Catálogo demonstrativo</strong>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="content-link-card" href="./historia.html">
+            <span>Contexto</span>
+            <strong>Conhecer a História</strong>
+            <span aria-hidden="true">→</span>
+          </a>
+        </nav>
+      </main>
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <section class="site-footer__brand" aria-label="Loja Xukuru">
+            <a class="site-footer__logo" href="./index.html">Loja <span>Xukuru</span></a>
+            <p>Uma proposta demonstrativa para explorar comércio justo e valorização do trabalho artesanal.</p>
+          </section>
+          <nav class="site-footer__nav" aria-label="Links rápidos">
+            <h2>Atalhos</h2>
+            <ul>
+              <li><a href="./index.html">Início</a></li>
+              <li><a href="./catalogo.html">Catálogo</a></li>
+              <li><a href="./sobre.html">Sobre</a></li>
+              <li><a href="./historia.html">História</a></li>
+            </ul>
+          </nav>
+          <nav class="site-footer__nav" aria-label="Cultura e leitura">
+            <h2>Cultura &amp; Leitura</h2>
+            <ul>
+              <li><a href="./historia.html">Contextualização sobre o Povo Xukuru</a></li>
+              <li><a href="https://pt.wikipedia.org/wiki/Xucurus" target="_blank" rel="noopener noreferrer">Artigo sobre os Xucurus na Wikipédia ↗</a></li>
+            </ul>
+            <p class="site-footer__note">O link externo é uma referência de leitura geral, não um endosso comunitário.</p>
+          </nav>
+          <aside class="site-footer__notice" aria-label="Limites do protótipo">
+            <p class="site-footer__notice-title">Protótipo demonstrativo</p>
+            <p>Sem venda real. Pagamentos e frete não estão integrados.</p>
+          </aside>
+        </div>
+        <div class="site-footer__bottom">Loja Xukuru · MVP demonstrativo</div>
+      </footer>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

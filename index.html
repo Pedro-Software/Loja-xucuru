@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore uma proposta demonstrativa de loja cultural da Loja Xukuru. Não há venda real." />
+    <title>Loja Xukuru | Início</title>
+  </head>
+  <body class="min-h-screen bg-sand text-ink">
+    <div class="flex min-h-screen flex-col">
+      <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+      <header class="site-header" data-site-header data-menu-open="false">
+        <div class="site-header__inner">
+          <a class="site-header__brand" href="./index.html" aria-label="Loja Xukuru, início">
+            <span>Loja</span> <span class="site-header__brand-accent">Xukuru</span>
+          </a>
+          <button class="site-header__toggle" type="button" data-menu-toggle aria-controls="site-primary-nav" aria-expanded="false" aria-label="Abrir menu de navegação">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="site-header__navigation" id="site-primary-nav" aria-label="Navegação principal">
+            <ul class="site-header__links">
+              <li><a data-nav-link href="./index.html">Início</a></li>
+              <li><a data-nav-link href="./catalogo.html">Catálogo</a></li>
+              <li><a data-nav-link href="./sobre.html">Sobre</a></li>
+              <li><a data-nav-link href="./historia.html">História</a></li>
+            </ul>
+            <form class="site-header__search" action="./catalogo.html" method="get" role="search" aria-label="Buscar no catálogo">
+              <label class="visually-hidden" for="site-search">Buscar produtos demonstrativos</label>
+              <input id="site-search" name="q" type="search" maxlength="80" placeholder="Buscar produtos demonstrativos…" autocomplete="off" />
+              <button type="submit" aria-label="Buscar">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"></circle><path d="m16 16 4.1 4.1"></path></svg>
+              </button>
+            </form>
+          </nav>
+          <a class="site-header__cart" data-nav-link data-cart-link href="./carrinho.html" aria-label="Carrinho, 0 itens">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 11.1a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 1.9-1.4L21 8H6"></path><circle cx="9.5" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
+            <span class="site-header__cart-count" data-cart-count aria-hidden="true">0</span>
+          </a>
+        </div>
+      </header>
+      <main id="main-content" class="home-page" data-home-page>
+        <div class="home-page__content">
+        <section class="home-hero" aria-labelledby="home-title">
+          <div class="home-hero__copy">
+            <p class="home-eyebrow"><span>Proposta demonstrativa</span></p>
+            <h1 id="home-title">Arte Ancestral <span>do Povo Xukuru</span></h1>
+            <p class="home-hero__lede">Esta é uma proposta demonstrativa de loja inspirada na riqueza cultural do Povo Xukuru, com fins exclusivamente educacionais e de portfólio.</p>
+            <a class="home-button" href="./catalogo.html">
+              Conhecer a Coleção
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg>
+            </a>
+          </div>
+          <figure class="home-artwork">
+            <img src="/images/placeholder-demonstrativo.svg" alt="" width="540" height="400" fetchpriority="high" decoding="async" />
+            <figcaption>
+              <span class="home-artwork__rule" aria-hidden="true"></span>
+              <strong>Prévia<br />demonstrativa</strong>
+              <span>Conteúdo ilustrativo<br />para apresentação</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="home-highlights" aria-labelledby="home-highlights-title">
+          <div class="home-section-heading">
+            <h2 id="home-highlights-title">Destaques demonstrativos</h2>
+            <a href="./catalogo.html">
+              Ver todos os itens
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg>
+            </a>
+          </div>
+          <div class="home-card-grid" data-home-grid aria-busy="true"></div>
+          <p class="home-status" data-home-status role="status" aria-live="polite">Carregando itens demonstrativos…</p>
+          <noscript><p class="home-state">Ative JavaScript para carregar os destaques demonstrativos. O catálogo continua disponível para consulta.</p></noscript>
+        </section>
+        </div>
+
+        <section class="home-purpose" aria-labelledby="home-purpose-title">
+          <div class="home-purpose__lead">
+            <p class="home-eyebrow">Nosso propósito</p>
+            <h2 id="home-purpose-title">Valorizar histórias.<br />Apoiar futuros possíveis.</h2>
+          </div>
+          <p>Esta é uma proposta demonstrativa que busca evidenciar, de forma respeitosa, o potencial de uma loja virtual dedicada à valorização da arte e da cultura do Povo Xukuru, com foco em design e educação.</p>
+          <aside class="home-purpose__notice" aria-label="Limites da proposta">
+            <p>Protótipo demonstrativo — sem venda real.</p>
+            <span aria-hidden="true"></span>
+          </aside>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <section class="site-footer__brand" aria-label="Loja Xukuru">
+            <a class="site-footer__logo" href="./index.html">Loja <span>Xukuru</span></a>
+            <p>Uma proposta demonstrativa para explorar comércio justo e valorização do trabalho artesanal.</p>
+          </section>
+          <nav class="site-footer__nav" aria-label="Links rápidos">
+            <h2>Atalhos</h2>
+            <ul>
+              <li><a href="./index.html">Início</a></li>
+              <li><a href="./catalogo.html">Catálogo</a></li>
+              <li><a href="./sobre.html">Sobre</a></li>
+              <li><a href="./historia.html">História</a></li>
+            </ul>
+          </nav>
+          <nav class="site-footer__nav" aria-label="Cultura e leitura">
+            <h2>Cultura &amp; Leitura</h2>
+            <ul>
+              <li><a href="./historia.html">Contextualização sobre o Povo Xukuru</a></li>
+              <li><a href="https://pt.wikipedia.org/wiki/Xucurus" target="_blank" rel="noopener noreferrer">Artigo sobre os Xucurus na Wikipédia ↗</a></li>
+            </ul>
+            <p class="site-footer__note">O link externo é uma referência de leitura geral, não um endosso comunitário.</p>
+          </nav>
+          <aside class="site-footer__notice" aria-label="Limites do protótipo">
+            <p class="site-footer__notice-title">Protótipo demonstrativo</p>
+            <p>Sem venda real. Pagamentos e frete não estão integrados.</p>
+          </aside>
+        </div>
+        <div class="site-footer__bottom">Loja Xukuru · MVP demonstrativo</div>
+      </footer>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 400" role="img" aria-labelledby="title desc">
+  <title id="title">Imagem demonstrativa abstrata</title>
+  <desc id="desc">Composição geométrica abstrata que não representa um produto real.</desc>
+  <rect width="540" height="400" fill="#F1EAE0"/>
+  <rect x="0" y="0" width="180" height="285" fill="#1F3E2B"/>
+  <circle cx="355" cy="178" r="112" fill="#D99B26"/>
+  <path d="M180 400V286h360v114H180Z" fill="#C45A35"/>
+  <path d="M180 286c0-63 51-114 114-114s114 51 114 114H180Z" fill="#F9F6F0"/>
+</svg>
