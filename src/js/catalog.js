@@ -19,16 +19,23 @@ if (form && grid && status && resultCount) {
   const clearButton = form.querySelector('[data-clear-filters]');
   let products = [];
 
-  const initialQuery = new URLSearchParams(window.location.search).get('q') || '';
+  const initialParams = new URLSearchParams(window.location.search);
+  const initialQuery = initialParams.get('q') || '';
   searchInput.value = initialQuery.slice(0, searchInput.maxLength);
+  categoryInput.value = initialParams.get('categoria') || '';
 
-  function updateQueryParameter(value) {
+  function updateQueryParameters() {
     const url = new URL(window.location.href);
-    const query = value.trim();
+    const query = searchInput.value.trim();
     if (query) {
       url.searchParams.set('q', query);
     } else {
       url.searchParams.delete('q');
+    }
+    if (categoryInput.value) {
+      url.searchParams.set('categoria', categoryInput.value);
+    } else {
+      url.searchParams.delete('categoria');
     }
     window.history.replaceState(null, '', url);
   }
@@ -70,22 +77,28 @@ if (form && grid && status && resultCount) {
     figure.className = 'catalog-card__figure';
     const image = document.createElement('img');
     image.src = product.image;
-    image.alt = '';
+    image.alt = product.imageAlt;
+    image.width = 900;
+    image.height = 900;
     image.loading = 'lazy';
     image.decoding = 'async';
     image.addEventListener(
       'error',
       () => {
-        const fallback = createText('span', 'catalog-card__image-fallback', 'Imagem demonstrativa');
+        const fallback = createText('span', 'catalog-card__image-fallback', 'Fotografia indisponível');
         fallback.setAttribute('role', 'img');
-        fallback.setAttribute('aria-label', 'Imagem demonstrativa indisponível');
+        fallback.setAttribute('aria-label', 'Fotografia de referência indisponível');
         image.replaceWith(fallback);
       },
       { once: true },
     );
 
-    const imageCaption = createText('figcaption', 'catalog-card__image-caption', 'Imagem ilustrativa');
-    const demoBadge = createText('span', 'catalog-card__badge', 'Demonstração');
+    const imageCaption = createText(
+      'figcaption',
+      'catalog-card__image-caption',
+      product.gallery[0]?.caption || 'Fotografia de referência',
+    );
+    const demoBadge = createText('span', 'catalog-card__badge', 'Item de referência');
     figure.append(image, imageCaption, demoBadge);
 
     const content = createText('div', 'catalog-card__content');
@@ -95,7 +108,7 @@ if (form && grid && status && resultCount) {
     const details = createText('div', 'catalog-card__details');
     const priceBlock = createText('div', 'catalog-card__price');
     priceBlock.append(
-      createText('span', 'catalog-card__price-label', 'Valor ilustrativo'),
+      createText('span', 'catalog-card__price-label', 'Valor de referência'),
       createText('strong', '', formatBRL(product.price)),
     );
     const action = createText('span', 'catalog-card__action', 'Ver item');
@@ -108,7 +121,7 @@ if (form && grid && status && resultCount) {
 
     if (product.featured) {
       const featured = createText('span', 'catalog-card__featured', 'Destaque');
-      featured.setAttribute('aria-label', 'Item demonstrativo em destaque');
+      featured.setAttribute('aria-label', 'Referência em destaque');
       figure.append(featured);
     }
 
@@ -172,7 +185,7 @@ if (form && grid && status && resultCount) {
     grid.setAttribute('aria-busy', 'false');
     resultCount.textContent =
       filtered.length +
-      (filtered.length === 1 ? ' item demonstrativo' : ' itens demonstrativos') +
+      (filtered.length === 1 ? ' item de referência' : ' itens de referência') +
       ' encontrados';
     status.textContent = '';
 
@@ -180,7 +193,7 @@ if (form && grid && status && resultCount) {
       grid.replaceChildren(
         createStatePanel(
           'Nenhum item encontrado',
-          'Tente outra busca ou limpe os filtros para voltar a ver os exemplos.',
+          'Tente outra busca ou limpe os filtros para explorar outras referências.',
           'Limpar filtros',
           'data-clear-filters',
         ),
@@ -194,7 +207,7 @@ if (form && grid && status && resultCount) {
   function clearFilters() {
     form.reset();
     searchInput.value = '';
-    updateQueryParameter('');
+    updateQueryParameters();
     clearFilterError();
     renderProducts();
     searchInput.focus();
@@ -202,8 +215,8 @@ if (form && grid && status && resultCount) {
 
   async function fetchProducts() {
     grid.setAttribute('aria-busy', 'true');
-    resultCount.textContent = 'Carregando itens demonstrativos…';
-    status.textContent = 'Carregando o catálogo demonstrativo.';
+    resultCount.textContent = 'Carregando catálogo…';
+    status.textContent = 'Carregando o catálogo.';
     grid.replaceChildren();
 
     try {
@@ -213,7 +226,7 @@ if (form && grid && status && resultCount) {
     } catch {
       grid.setAttribute('aria-busy', 'false');
       resultCount.textContent = '';
-      status.textContent = 'Não foi possível carregar o catálogo demonstrativo.';
+      status.textContent = 'Não foi possível carregar o catálogo.';
       grid.replaceChildren(
         createStatePanel(
           'O catálogo não carregou',
@@ -227,7 +240,7 @@ if (form && grid && status && resultCount) {
 
   form.addEventListener('input', (event) => {
     if (event.target === searchInput) {
-      updateQueryParameter(searchInput.value);
+      updateQueryParameters();
       renderProducts();
     } else if (event.target === minPriceInput || event.target === maxPriceInput) {
       renderProducts();
@@ -240,13 +253,14 @@ if (form && grid && status && resultCount) {
       event.target === sortInput ||
       event.target === featuredInput
     ) {
+      updateQueryParameters();
       renderProducts();
     }
   });
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    updateQueryParameter(searchInput.value);
+    updateQueryParameters();
     renderProducts();
   });
 

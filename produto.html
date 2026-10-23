@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Detalhes ilustrativos de itens demonstrativos da Loja Xukuru." />
-    <title>Item demonstrativo | Loja Xukuru</title>
+    <meta name="description" content="Explore imagens de referência, informações e detalhes do catálogo da Loja Xukuru." />
+    <title>Detalhe do catálogo | Loja Xukuru</title>
   </head>
   <body class="min-h-screen bg-sand text-ink">
     <div class="flex min-h-screen flex-col">
       <a class="skip-link" href="#main-content">Pular para o conte&#250;do</a>
       <header class="site-header" data-site-header data-menu-open="false">
         <div class="site-header__inner">
-          <a class="site-header__brand" href="./index.html" aria-label="Loja Xukuru, in?cio">
+          <a class="site-header__brand" href="./index.html" aria-label="Loja Xukuru, início">
             <span>Loja</span> <span class="site-header__brand-accent">Xukuru</span>
           </a>
-          <button class="site-header__toggle" type="button" data-menu-toggle aria-controls="site-primary-nav" aria-expanded="false" aria-label="Abrir menu de navega??o">
+          <button class="site-header__toggle" type="button" data-menu-toggle aria-controls="site-primary-nav" aria-expanded="false" aria-label="Abrir menu de navegação">
             <span></span><span></span><span></span>
           </button>
           <nav class="site-header__navigation" id="site-primary-nav" aria-label="Navega&#231;&#227;o principal">
@@ -25,8 +25,8 @@
               <li><a data-nav-link href="./historia.html">Hist&#243;ria</a></li>
             </ul>
             <form class="site-header__search" action="./catalogo.html" method="get" role="search" aria-label="Buscar no cat&#225;logo">
-              <label class="visually-hidden" for="site-search">Buscar produtos demonstrativos</label>
-              <input id="site-search" name="q" type="search" maxlength="80" placeholder="Buscar produtos demonstrativos..." autocomplete="off" />
+              <label class="visually-hidden" for="site-search">Buscar no catálogo</label>
+              <input id="site-search" name="q" type="search" maxlength="80" placeholder="Buscar artesanato e categorias…" autocomplete="off" />
               <button type="submit" aria-label="Buscar">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"></circle><path d="m16 16 4.1 4.1"></path></svg>
               </button>
@@ -46,40 +46,53 @@
             <li aria-current="page">Detalhes</li>
           </ol>
         </nav>
-        <p class="shop-demo-banner">Protótipo demonstrativo — nenhum item está disponível para compra real.</p>
-        <p class="shop-status" data-product-state role="status" aria-live="polite">Carregando detalhes do item demonstrativo…</p>
-        <section class="product-detail" data-product-view aria-labelledby="product-title" hidden>
-          <div class="product-detail__image-wrap">
-            <img data-product-image src="/images/placeholder-demonstrativo.svg" alt="" />
-            <span class="product-detail__image-caption">Imagem demonstrativa</span>
-          </div>
-          <div class="product-detail__copy">
-            <p class="product-detail__eyebrow" data-product-category></p>
-            <h1 id="product-title" data-product-name></h1>
-            <p class="product-detail__description" data-product-description></p>
-            <p class="product-detail__price-label">Valor ilustrativo</p>
-            <p class="product-detail__price" data-product-price></p>
-            <div class="product-detail__materials">
-              <h2>Materiais</h2>
-              <p>Informação sujeita a confirmação; os dados deste item são demonstrativos.</p>
-              <ul data-product-materials></ul>
+        <p class="shop-demo-banner">Referência visual — as fotos e os valores não correspondem a peças anunciadas.</p>
+        <p class="shop-status" data-product-state role="status" aria-live="polite">Carregando detalhes…</p>
+        <div data-product-view hidden>
+          <section class="product-detail" aria-labelledby="product-title">
+            <div class="product-gallery" data-product-gallery>
+              <figure class="product-detail__image-wrap">
+                <span class="shop-image-fallback" data-product-image-fallback role="img" aria-label="Fotografia de referência indisponível" hidden></span>
+                <img id="product-main-image" data-product-image src="/images/products/ceramic-bowls-pastel.jpg" alt="" width="1000" height="1000" fetchpriority="high" decoding="async" />
+                <figcaption class="product-detail__image-caption" data-product-caption>Imagem de referência</figcaption>
+              </figure>
+              <div class="product-gallery__thumbnails" data-product-thumbnails role="group" aria-label="Imagens de referência"></div>
             </div>
-            <form class="product-detail__form" data-product-form hidden>
-              <div class="shop-field">
-                <label for="product-quantity">Quantidade demonstrativa</label>
-                <input id="product-quantity" name="quantity" type="number" min="1" max="10" value="1" step="1" inputmode="numeric" />
+            <div class="product-detail__copy">
+              <p class="product-detail__eyebrow" data-product-category></p>
+              <h1 id="product-title" data-product-name></h1>
+              <p class="product-detail__description" data-product-description></p>
+              <p class="product-detail__visual-note" data-product-visual-note></p>
+              <p class="product-detail__price-label">Valor de referência</p>
+              <p class="product-detail__price" data-product-price></p>
+              <div class="product-detail__materials">
+                <h2>Materiais</h2>
+                <ul data-product-materials></ul>
               </div>
-              <button class="shop-button shop-button--primary" type="submit">Adicionar ao Carrinho</button>
-            </form>
-            <p class="shop-status" data-product-message role="status" aria-live="polite"></p>
-          </div>
-        </section>
+              <form class="product-detail__form" data-product-form hidden>
+                <div class="shop-field">
+                  <label for="product-quantity">Quantidade</label>
+                  <input id="product-quantity" name="quantity" type="number" min="1" max="10" value="1" step="1" inputmode="numeric" />
+                </div>
+                <button class="shop-button shop-button--primary" type="submit">Adicionar à sacola</button>
+              </form>
+              <p class="shop-status" data-product-message role="status" aria-live="polite"></p>
+            </div>
+          </section>
+          <section class="related-products" data-product-related aria-labelledby="related-products-title">
+            <div class="related-products__heading">
+              <p class="shop-kicker">Continue explorando</p>
+              <h2 id="related-products-title">Outras referências</h2>
+            </div>
+            <div class="related-products__grid" data-related-grid></div>
+          </section>
+        </div>
       </main>
       <footer class="site-footer">
         <div class="site-footer__inner">
           <section class="site-footer__brand" aria-label="Loja Xukuru">
             <a class="site-footer__logo" href="./index.html">Loja <span>Xukuru</span></a>
-            <p>Uma proposta demonstrativa para explorar comércio justo e valorização do trabalho artesanal.</p>
+            <p>Uma proposta digital sobre artesanato, cultura e respeito às histórias do povo Xukuru do Ororubá.</p>
           </section>
           <nav class="site-footer__nav" aria-label="Links rápidos">
             <h2>Atalhos</h2>
@@ -98,12 +111,8 @@
             </ul>
             <p class="site-footer__note">O link externo é uma referência de leitura geral, não um endosso comunitário.</p>
           </nav>
-          <aside class="site-footer__notice" aria-label="Limites do protótipo">
-            <p class="site-footer__notice-title">Protótipo demonstrativo</p>
-            <p>Sem venda real. Pagamentos e frete não estão integrados.</p>
-          </aside>
         </div>
-        <div class="site-footer__bottom">Loja Xukuru · MVP demonstrativo</div>
+        <div class="site-footer__bottom">Loja Xukuru · proposta digital</div>
       </footer>
     </div>
     <script type="module" src="/src/js/main.js"></script>

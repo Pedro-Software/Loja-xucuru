@@ -1,6 +1,6 @@
 # Loja Xukuru
 
-MVP demonstrativo de uma proposta de loja virtual cultural. Os oito itens e valores do catálogo são ilustrativos; o site não realiza vendas.
+MVP de uma proposta de loja virtual cultural. O catálogo reúne oito referências visuais com nomes e valores de exemplo; o site não realiza vendas.
 
 ## Requisitos
 
@@ -36,9 +36,9 @@ O checkout demonstrativo está em `http://127.0.0.1:5173/checkout.html`.
 
 ## Páginas
 
-- `/index.html` — início e destaques demonstrativos.
+- `/index.html` — início, destaques e exploração por categoria.
 - `/catalogo.html` — busca, categoria, faixa de preço e ordenação.
-- `/produto.html?id=demo-peca-01` — detalhe de um item do catálogo.
+- `/produto.html?id=demo-peca-01` — detalhe, galeria local e referências relacionadas.
 - `/carrinho.html` — quantidades, subtotal e validação de formato do CEP.
 - `/checkout.html` — resumo de pagamento demonstrativo.
 - `/sobre.html` e `/historia.html` — propósito e contextualização editorial.
@@ -59,7 +59,9 @@ npm run preview
 - `src/js/`: módulos ES do catálogo, detalhe, carrinho, checkout e layout compartilhado.
 - `src/css/`: estilos compartilhados e específicos de cada superfície; Tailwind CSS 4 é processado pelo plugin `@tailwindcss/vite`, sem CDN.
 - `public/data/produtos.json`: fonte única dos oito itens demonstrativos, usada pela interface e pela API.
-- `public/images/placeholder-demonstrativo.svg`: placeholder vetorial local; não representa uma peça real.
+- `public/images/products/` e `public/images/editorial/`: fotografias locais de referência para catálogo, Home, Sobre e História.
+- `docs/IMAGENS.md`: fontes, créditos e licenças das fotografias utilizadas.
+- `public/images/placeholder-demonstrativo.svg`: arquivo legado preservado; não é exibido no site.
 - `server/`: endpoints Express, validação de CEP e validação/cálculo do resumo no servidor.
 - `scripts/dev.js`: inicializa e encerra os servidores de desenvolvimento.
 - `vite.config.js`: entradas do build multipágina e proxy local `/api` → `http://127.0.0.1:3001`.

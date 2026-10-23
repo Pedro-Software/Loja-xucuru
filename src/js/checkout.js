@@ -85,17 +85,17 @@ if (page) {
     page.querySelector('[data-checkout-demo-id]').textContent = summary.demoId;
     const values = page.querySelector('[data-checkout-values]');
     values.replaceChildren();
-    appendDefinition(values, 'Subtotal ilustrativo', formatBRL(summary.subtotalCents / 100));
+    appendDefinition(values, 'Subtotal de referência', formatBRL(summary.subtotalCents / 100));
 
     if (summary.paymentMethod === 'pix') {
-      appendDefinition(values, 'Desconto Pix ilustrativo (5%)', `− ${formatBRL(summary.discountCents / 100)}`);
+      appendDefinition(values, 'Desconto Pix de referência (5%)', `− ${formatBRL(summary.discountCents / 100)}`);
     } else if (summary.paymentMethod === 'cartao') {
-      appendDefinition(values, 'Parcelamento ilustrativo no cartão', formatInstallments(summary.installmentsCents));
+      appendDefinition(values, 'Parcelamento de referência no cartão', formatInstallments(summary.installmentsCents));
     } else {
       throw new Error('A API devolveu uma forma demonstrativa de pagamento inválida.');
     }
 
-    appendDefinition(values, 'Total demonstrativo', formatBRL(summary.totalCents / 100), true);
+    appendDefinition(values, 'Total de referência', formatBRL(summary.totalCents / 100), true);
     page.querySelector('[data-checkout-result-message]').textContent = summary.message;
     result.hidden = false;
     result.focus?.();
@@ -105,10 +105,10 @@ if (page) {
     result.hidden = true;
     empty.hidden = true;
     content.hidden = true;
-    setStatus('Carregando catálogo e carrinho demonstrativos.');
+    setStatus('Carregando sua seleção.');
     try {
       const response = await fetch('/api/produtos', { headers: { Accept: 'application/json' } });
-      if (!response.ok) throw new Error('A API não conseguiu carregar o catálogo demonstrativo.');
+      if (!response.ok) throw new Error('O catálogo não foi carregado.');
       products = validateProducts(await response.json());
       cart = readCart(undefined, products);
       if (cart.length === 0) {
@@ -121,7 +121,7 @@ if (page) {
       setStatus('');
       content.hidden = false;
     } catch {
-      setStatus('Não foi possível acessar a API demonstrativa ou o carrinho salvo.', true, true);
+      setStatus('Não foi possível carregar o catálogo ou a sacola salva.', true, true);
     }
   }
 
@@ -148,16 +148,16 @@ if (page) {
       } catch {
         throw new Error('A API devolveu uma resposta que não pôde ser lida.');
       }
-      if (!response.ok) throw new Error(payload.error || 'Não foi possível gerar o resumo demonstrativo.');
+      if (!response.ok) throw new Error(payload.error || 'Não foi possível gerar o resumo.');
       renderResult(payload);
     } catch (error) {
       errorBox.textContent = error instanceof TypeError
-        ? 'API demonstrativa indisponível. Nenhuma compra foi realizada; tente novamente em instantes.'
+        ? 'Serviço de finalização indisponível. Nenhuma compra foi realizada; tente novamente em instantes.'
         : error.message;
       errorBox.hidden = false;
     } finally {
       submitButton.disabled = false;
-      submitButton.textContent = 'Gerar resumo demonstrativo';
+      submitButton.textContent = 'Gerar resumo';
     }
   });
 

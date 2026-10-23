@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explore uma proposta demonstrativa de loja cultural da Loja Xukuru. Não há venda real." />
-    <title>Loja Xukuru | Início</title>
+    <meta name="description" content="Conheça a proposta da Loja Xukuru, explore referências de artesanato e leia sobre a história do povo Xukuru do Ororubá." />
+    <title>Loja Xukuru | Arte, memória e cultura</title>
   </head>
   <body class="min-h-screen bg-sand text-ink">
     <div class="flex min-h-screen flex-col">
@@ -25,8 +25,8 @@
               <li><a data-nav-link href="./historia.html">História</a></li>
             </ul>
             <form class="site-header__search" action="./catalogo.html" method="get" role="search" aria-label="Buscar no catálogo">
-              <label class="visually-hidden" for="site-search">Buscar produtos demonstrativos</label>
-              <input id="site-search" name="q" type="search" maxlength="80" placeholder="Buscar produtos demonstrativos…" autocomplete="off" />
+              <label class="visually-hidden" for="site-search">Buscar no catálogo</label>
+              <input id="site-search" name="q" type="search" maxlength="80" placeholder="Buscar artesanato e categorias…" autocomplete="off" />
               <button type="submit" aria-label="Buscar">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"></circle><path d="m16 16 4.1 4.1"></path></svg>
               </button>
@@ -42,55 +42,66 @@
         <div class="home-page__content">
         <section class="home-hero" aria-labelledby="home-title">
           <div class="home-hero__copy">
-            <p class="home-eyebrow"><span>Proposta demonstrativa</span></p>
-            <h1 id="home-title">Arte Ancestral <span>do Povo Xukuru</span></h1>
-            <p class="home-hero__lede">Esta é uma proposta demonstrativa de loja inspirada na riqueza cultural do Povo Xukuru, com fins exclusivamente educacionais e de portfólio.</p>
+            <p class="home-eyebrow"><span>Loja Xukuru</span></p>
+            <h1 id="home-title">Arte ancestral, <span>histórias que permanecem.</span></h1>
+            <p class="home-hero__lede">Conheça referências de formas, texturas e gestos do fazer artesanal, em uma proposta digital que busca valorizar histórias e abrir espaço para a escuta.</p>
             <a class="home-button" href="./catalogo.html">
-              Conhecer a Coleção
+              Explorar coleção
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg>
             </a>
+            <p class="home-hero__note">Fotografias e valores são referências independentes; não representam peças à venda nem produção Xukuru.</p>
           </div>
           <figure class="home-artwork">
-            <img src="/images/placeholder-demonstrativo.svg" alt="" width="540" height="400" fetchpriority="high" decoding="async" />
+            <img src="/images/editorial/pottery-process-unsplash.jpg" alt="Mãos trabalhando a argila em uma roda de oleiro; fotografia de referência sem vínculo com artesãos Xukuru." width="1800" height="1200" fetchpriority="high" decoding="async" />
             <figcaption>
               <span class="home-artwork__rule" aria-hidden="true"></span>
-              <strong>Prévia<br />demonstrativa</strong>
-              <span>Conteúdo ilustrativo<br />para apresentação</span>
+              <strong>O gesto de criar<br />em cada forma</strong>
+              <span>Foto de Earl Wilcox · Unsplash<br />Santa Barbara, Califórnia</span>
             </figcaption>
           </figure>
         </section>
 
         <section class="home-highlights" aria-labelledby="home-highlights-title">
           <div class="home-section-heading">
-            <h2 id="home-highlights-title">Destaques demonstrativos</h2>
+            <h2 id="home-highlights-title">Artesanato em destaque</h2>
             <a href="./catalogo.html">
               Ver todos os itens
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg>
             </a>
           </div>
           <div class="home-card-grid" data-home-grid aria-busy="true"></div>
-          <p class="home-status" data-home-status role="status" aria-live="polite">Carregando itens demonstrativos…</p>
-          <noscript><p class="home-state">Ative JavaScript para carregar os destaques demonstrativos. O catálogo continua disponível para consulta.</p></noscript>
+          <p class="home-status" data-home-status role="status" aria-live="polite">Carregando destaques…</p>
+          <noscript><p class="home-state">Ative JavaScript para carregar os destaques. O catálogo continua disponível para consulta.</p></noscript>
+        </section>
+
+        <section class="home-categories" aria-labelledby="home-categories-title">
+          <div class="home-section-heading">
+            <h2 id="home-categories-title">Explore por categoria</h2>
+            <a href="./catalogo.html">Ver todo o catálogo <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="home-category-grid" data-home-categories aria-label="Categorias do catálogo"></div>
+          <p class="home-category-note">Cada fotografia é uma referência independente, sem relação com peças ou autoria Xukuru.</p>
         </section>
         </div>
 
         <section class="home-purpose" aria-labelledby="home-purpose-title">
+          <figure class="home-purpose__image">
+            <img src="/images/editorial/caatinga-catimbau.jpg" alt="Vegetação de caatinga com cactos em flor no Vale do Catimbau, Buíque, Pernambuco; imagem regional de contexto." width="528" height="640" loading="lazy" decoding="async" />
+            <figcaption>Vale do Catimbau, Buíque · foto: Maria Teresa Amorim · CC BY-SA 4.0. Não representa território Xukuru específico.</figcaption>
+          </figure>
           <div class="home-purpose__lead">
-            <p class="home-eyebrow">Nosso propósito</p>
-            <h2 id="home-purpose-title">Valorizar histórias.<br />Apoiar futuros possíveis.</h2>
+            <p class="home-eyebrow">Cultura, tradição e identidade</p>
+            <h2 id="home-purpose-title">Valorizar histórias.<br />Criar espaço para escuta.</h2>
           </div>
-          <p>Esta é uma proposta demonstrativa que busca evidenciar, de forma respeitosa, o potencial de uma loja virtual dedicada à valorização da arte e da cultura do Povo Xukuru, com foco em design e educação.</p>
-          <aside class="home-purpose__notice" aria-label="Limites da proposta">
-            <p>Protótipo demonstrativo — sem venda real.</p>
-            <span aria-hidden="true"></span>
-          </aside>
+          <p>Uma futura iniciativa comercial exigiria diálogo com as pessoas e organizações envolvidas, consentimento para conteúdos e imagens e acordos claros sobre autoria, remuneração e operação.</p>
+          <a class="home-purpose__link" href="./historia.html">Conhecer a história <span aria-hidden="true">→</span></a>
         </section>
       </main>
       <footer class="site-footer">
         <div class="site-footer__inner">
           <section class="site-footer__brand" aria-label="Loja Xukuru">
             <a class="site-footer__logo" href="./index.html">Loja <span>Xukuru</span></a>
-            <p>Uma proposta demonstrativa para explorar comércio justo e valorização do trabalho artesanal.</p>
+            <p>Uma proposta digital sobre artesanato, cultura e respeito às histórias do povo Xukuru do Ororubá.</p>
           </section>
           <nav class="site-footer__nav" aria-label="Links rápidos">
             <h2>Atalhos</h2>
@@ -109,12 +120,8 @@
             </ul>
             <p class="site-footer__note">O link externo é uma referência de leitura geral, não um endosso comunitário.</p>
           </nav>
-          <aside class="site-footer__notice" aria-label="Limites do protótipo">
-            <p class="site-footer__notice-title">Protótipo demonstrativo</p>
-            <p>Sem venda real. Pagamentos e frete não estão integrados.</p>
-          </aside>
         </div>
-        <div class="site-footer__bottom">Loja Xukuru · MVP demonstrativo</div>
+        <div class="site-footer__bottom">Loja Xukuru · proposta digital</div>
       </footer>
     </div>
     <script type="module" src="/src/js/main.js"></script>

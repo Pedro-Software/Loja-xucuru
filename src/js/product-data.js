@@ -1,5 +1,9 @@
-const allowedCategories = new Set(['Cerâmica', 'Trançados', 'Biojoias', 'Esculturas']);
+const allowedCategories = new Set(['Cerâmica', 'Trançados', 'Adornos', 'Esculturas']);
 const localImagePattern = /^\/images\/[a-zA-Z0-9/_-]+\.(svg|png|webp|jpe?g)$/i;
+
+function isLocalImage(value) {
+  return typeof value === 'string' && localImagePattern.test(value) && !value.includes('..');
+}
 
 export function validateProducts(payload) {
   if (!Array.isArray(payload)) {
@@ -17,7 +21,7 @@ export function validateProducts(payload) {
     const validCategory = allowedCategories.has(product.category);
     const validDescription =
       typeof product.description === 'string' &&
-      /demonstrativ|ilustrativ/i.test(product.description);
+      /demonstrativ|ilustrativ|referência/i.test(product.description);
     const validPrice =
       typeof product.price === 'number' && Number.isFinite(product.price) && product.price >= 0;
     const validMaterials =
@@ -25,10 +29,23 @@ export function validateProducts(payload) {
       product.materials.every((material) => typeof material === 'string');
     const validMaterialsStatus =
       typeof product.materialsStatus === 'string' && product.materialsStatus.trim().length > 0;
-    const validImage =
-      typeof product.image === 'string' &&
-      localImagePattern.test(product.image) &&
-      !product.image.includes('..');
+    const validImage = isLocalImage(product.image);
+    const validImageAlt =
+      typeof product.imageAlt === 'string' && product.imageAlt.trim().length > 0;
+    const validVisualNote =
+      typeof product.visualNote === 'string' && /referência/i.test(product.visualNote);
+    const validGallery =
+      Array.isArray(product.gallery) &&
+      product.gallery.length > 0 &&
+      product.gallery.every((image) =>
+        image &&
+        isLocalImage(image.src) &&
+        typeof image.alt === 'string' &&
+        image.alt.trim().length > 0 &&
+        typeof image.caption === 'string' &&
+        image.caption.trim().length > 0,
+      ) &&
+      product.gallery[0].src === product.image;
 
     if (
       !validId ||
@@ -39,6 +56,9 @@ export function validateProducts(payload) {
       !validMaterials ||
       !validMaterialsStatus ||
       !validImage ||
+      !validImageAlt ||
+      !validVisualNote ||
+      !validGallery ||
       typeof product.featured !== 'boolean' ||
       product.demonstrative !== true ||
       product.availableForDemo !== true ||
@@ -61,6 +81,9 @@ export function validateProducts(payload) {
       materials: [...product.materials],
       materialsStatus: product.materialsStatus,
       image: product.image,
+      imageAlt: product.imageAlt,
+      visualNote: product.visualNote,
+      gallery: product.gallery.map((image) => ({ ...image })),
       featured: product.featured,
       demonstrative: product.demonstrative,
       availableForDemo: product.availableForDemo,

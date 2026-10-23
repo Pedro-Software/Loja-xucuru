@@ -11,15 +11,21 @@ const dataPath = new URL('../public/data/produtos.json', import.meta.url);
 const productData = JSON.parse(readFileSync(dataPath, 'utf8'));
 const products = validateProducts(productData);
 const projectRoot = fileURLToPath(new URL('..', import.meta.url));
+const imageCreditsPath = resolve(projectRoot, 'docs', 'IMAGENS.md');
 
-test('o JSON tem oito itens demonstrativos válidos e imagens locais', () => {
+test('o JSON tem oito itens de referência válidos e galerias locais', () => {
   assert.equal(products.length, 8);
   assert.equal(new Set(products.map((product) => product.id)).size, 8);
   assert.ok(products.every((product) => product.demonstrative && product.availableForDemo));
   assert.ok(products.every((product) => product.materials.length === 0));
+  assert.ok(products.every((product) => product.imageAlt && product.visualNote && product.gallery.length >= 2));
+  assert.ok(existsSync(imageCreditsPath), 'a documentação de fontes e licenças precisa existir');
+  const imageCredits = readFileSync(imageCreditsPath, 'utf8');
   assert.ok(
     products.every((product) =>
-      existsSync(resolve(projectRoot, 'public', product.image.slice(1))),
+      [product.image, ...product.gallery.map((image) => image.src)].every((src) =>
+        existsSync(resolve(projectRoot, 'public', src.slice(1))) && imageCredits.includes(`public${src}`),
+      ),
     ),
   );
 });
@@ -31,7 +37,7 @@ test('normaliza acentos para busca textual', () => {
 });
 
 test('filtra categoria, faixa de preço e destaques', () => {
-  assert.equal(filterProducts(products, { category: 'biojoias' }).length, 2);
+  assert.equal(filterProducts(products, { category: 'adornos' }).length, 2);
   assert.deepEqual(
     filterProducts(products, { minPrice: '70', maxPrice: '120' }).map((product) => product.id),
     ['demo-peca-02', 'demo-peca-03', 'demo-peca-04', 'demo-peca-06', 'demo-peca-08'],

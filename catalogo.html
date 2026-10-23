@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Explore o catálogo demonstrativo da Loja Xukuru. Produtos e valores são ilustrativos; não há venda real."
+      content="Explore referências de artesanato no catálogo visual da Loja Xukuru. Imagens e valores são de exemplo e não representam ofertas de venda."
     />
-    <title>Catálogo demonstrativo | Loja Xukuru</title>
+    <title>Catálogo | Loja Xukuru</title>
   </head>
   <body class="min-h-screen bg-sand text-ink">
     <div class="flex min-h-screen flex-col">
       <a class="skip-link" href="#main-content">Pular para o conte&#250;do</a>
       <header class="site-header" data-site-header data-menu-open="false">
         <div class="site-header__inner">
-          <a class="site-header__brand" href="./index.html" aria-label="Loja Xukuru, in?cio">
+          <a class="site-header__brand" href="./index.html" aria-label="Loja Xukuru, início">
             <span>Loja</span> <span class="site-header__brand-accent">Xukuru</span>
           </a>
-          <button class="site-header__toggle" type="button" data-menu-toggle aria-controls="site-primary-nav" aria-expanded="false" aria-label="Abrir menu de navega??o">
+          <button class="site-header__toggle" type="button" data-menu-toggle aria-controls="site-primary-nav" aria-expanded="false" aria-label="Abrir menu de navegação">
             <span></span><span></span><span></span>
           </button>
           <nav class="site-header__navigation" id="site-primary-nav" aria-label="Navega&#231;&#227;o principal">
@@ -28,8 +28,8 @@
               <li><a data-nav-link href="./historia.html">Hist&#243;ria</a></li>
             </ul>
             <form class="site-header__search" action="./catalogo.html" method="get" role="search" aria-label="Buscar no cat&#225;logo">
-              <label class="visually-hidden" for="site-search">Buscar produtos demonstrativos</label>
-              <input id="site-search" name="q" type="search" maxlength="80" placeholder="Buscar produtos demonstrativos..." autocomplete="off" />
+              <label class="visually-hidden" for="site-search">Buscar no catálogo</label>
+              <input id="site-search" name="q" type="search" maxlength="80" placeholder="Buscar artesanato e categorias…" autocomplete="off" />
               <button type="submit" aria-label="Buscar">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"></circle><path d="m16 16 4.1 4.1"></path></svg>
               </button>
@@ -52,21 +52,21 @@
 
         <section class="catalog-intro" aria-labelledby="catalog-title">
           <div>
-            <h1 id="catalog-title">Catálogo demonstrativo</h1>
+            <h1 id="catalog-title">Nosso catálogo</h1>
             <p>
-              Explore exemplos de conteúdo e navegação. Os itens, descrições e valores são ilustrativos
-              e não representam uma oferta de venda.
+              Explore formas, texturas e referências visuais do artesanato. Os itens e valores são amostras,
+              sem oferta de compra.
             </p>
           </div>
-          <aside class="catalog-demo-note" aria-label="Aviso sobre a demonstração">
+          <aside class="catalog-demo-note" aria-label="Sobre as referências visuais">
             <span class="catalog-demo-note__mark" aria-hidden="true"></span>
-            <p><strong>Protótipo demonstrativo.</strong> Nenhum item está disponível para compra.</p>
+            <p><strong>Catálogo de referência.</strong> As fotografias são independentes e não confirmam autoria ou procedência Xukuru.</p>
           </aside>
         </section>
 
         <div class="catalog-workspace">
           <form class="catalog-filters" data-catalog-form role="search" aria-label="Buscar e filtrar produtos">
-            <h2>Encontrar itens</h2>
+            <h2>Refinar referências</h2>
 
             <div class="catalog-field">
               <label for="catalog-search">Buscar produtos</label>
@@ -76,7 +76,7 @@
                 type="search"
                 maxlength="80"
                 autocomplete="off"
-                placeholder="Nome, categoria ou descrição"
+                placeholder="Nome, categoria ou objeto"
               />
             </div>
 
@@ -86,13 +86,13 @@
                 <option value="">Todas as categorias</option>
                 <option value="ceramica">Cerâmica</option>
                 <option value="trancados">Trançados</option>
-                <option value="biojoias">Biojoias</option>
+                <option value="adornos">Adornos</option>
                 <option value="esculturas">Esculturas</option>
               </select>
             </div>
 
             <fieldset class="catalog-price">
-              <legend>Faixa de preço ilustrativa</legend>
+              <legend>Faixa de valores de referência</legend>
               <div class="catalog-price__fields">
                 <div class="catalog-field">
                   <label for="catalog-min-price">Mínimo (R$)</label>
@@ -109,7 +109,7 @@
             <div class="catalog-field">
               <label for="catalog-sort">Ordenar por</label>
               <select id="catalog-sort" name="sort">
-                <option value="default">Ordem do catálogo</option>
+                <option value="default">Em destaque</option>
                 <option value="price-asc">Menor preço</option>
                 <option value="price-desc">Maior preço</option>
               </select>
@@ -128,8 +128,8 @@
 
           <section class="catalog-results" aria-labelledby="catalog-results-title">
             <div class="catalog-results__heading">
-              <h2 id="catalog-results-title">Itens para explorar</h2>
-              <p data-result-count aria-live="polite">Carregando itens demonstrativos…</p>
+              <h2 id="catalog-results-title">Seleção de referências</h2>
+              <p data-result-count aria-live="polite">Carregando catálogo…</p>
             </div>
 
             <div class="catalog-grid" data-product-grid aria-busy="true" aria-live="off">
@@ -141,7 +141,7 @@
             <p class="catalog-live-status" data-catalog-status role="status" aria-live="polite"></p>
             <noscript>
               <p class="catalog-state">
-                Este catálogo precisa de JavaScript para carregar os itens demonstrativos. Ative JavaScript e atualize a página.
+                Este catálogo precisa de JavaScript para carregar as referências. Ative JavaScript e atualize a página.
               </p>
             </noscript>
           </section>
@@ -152,7 +152,7 @@
         <div class="site-footer__inner">
           <section class="site-footer__brand" aria-label="Loja Xukuru">
             <a class="site-footer__logo" href="./index.html">Loja <span>Xukuru</span></a>
-            <p>Uma proposta demonstrativa para explorar comércio justo e valorização do trabalho artesanal.</p>
+            <p>Uma proposta digital sobre artesanato, cultura e respeito às histórias do povo Xukuru do Ororubá.</p>
           </section>
           <nav class="site-footer__nav" aria-label="Links rápidos">
             <h2>Atalhos</h2>
@@ -171,12 +171,8 @@
             </ul>
             <p class="site-footer__note">O link externo é uma referência de leitura geral, não um endosso comunitário.</p>
           </nav>
-          <aside class="site-footer__notice" aria-label="Limites do protótipo">
-            <p class="site-footer__notice-title">Protótipo demonstrativo</p>
-            <p>Sem venda real. Pagamentos e frete não estão integrados.</p>
-          </aside>
         </div>
-        <div class="site-footer__bottom">Loja Xukuru · MVP demonstrativo</div>
+        <div class="site-footer__bottom">Loja Xukuru · proposta digital</div>
       </footer>
     </div>
     <script type="module" src="/src/js/main.js"></script>

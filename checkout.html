@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Confira uma simulação demonstrativa do carrinho da Loja Xukuru. Nenhum pagamento será realizado." />
-    <title>Loja Xukuru | Checkout</title>
+    <meta name="description" content="Revise uma seleção de referências e gere um resumo de exemplo. Nenhum pagamento será cobrado." />
+    <title>Finalização | Loja Xukuru</title>
   </head>
   <body class="min-h-screen bg-sand text-ink">
     <div class="flex min-h-screen flex-col">
       <a class="skip-link" href="#main-content">Pular para o conte&#250;do</a>
       <header class="site-header" data-site-header data-menu-open="false">
         <div class="site-header__inner">
-          <a class="site-header__brand" href="./index.html" aria-label="Loja Xukuru, in?cio">
+          <a class="site-header__brand" href="./index.html" aria-label="Loja Xukuru, início">
             <span>Loja</span> <span class="site-header__brand-accent">Xukuru</span>
           </a>
-          <button class="site-header__toggle" type="button" data-menu-toggle aria-controls="site-primary-nav" aria-expanded="false" aria-label="Abrir menu de navega??o">
+          <button class="site-header__toggle" type="button" data-menu-toggle aria-controls="site-primary-nav" aria-expanded="false" aria-label="Abrir menu de navegação">
             <span></span><span></span><span></span>
           </button>
           <nav class="site-header__navigation" id="site-primary-nav" aria-label="Navega&#231;&#227;o principal">
@@ -25,8 +25,8 @@
               <li><a data-nav-link href="./historia.html">Hist&#243;ria</a></li>
             </ul>
             <form class="site-header__search" action="./catalogo.html" method="get" role="search" aria-label="Buscar no cat&#225;logo">
-              <label class="visually-hidden" for="site-search">Buscar produtos demonstrativos</label>
-              <input id="site-search" name="q" type="search" maxlength="80" placeholder="Buscar produtos demonstrativos..." autocomplete="off" />
+              <label class="visually-hidden" for="site-search">Buscar no catálogo</label>
+              <input id="site-search" name="q" type="search" maxlength="80" placeholder="Buscar artesanato e categorias…" autocomplete="off" />
               <button type="submit" aria-label="Buscar">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"></circle><path d="m16 16 4.1 4.1"></path></svg>
               </button>
@@ -43,56 +43,56 @@
           <ol>
             <li><a href="./index.html">Início</a></li>
             <li><a href="./carrinho.html">Carrinho</a></li>
-            <li aria-current="page">Checkout demonstrativo</li>
+            <li aria-current="page">Finalização</li>
           </ol>
         </nav>
         <header class="checkout-intro">
-          <p class="checkout-kicker">Etapa demonstrativa</p>
-          <h1>Resumo do seu carrinho</h1>
-          <p>Confira os itens e gere um resumo ilustrativo. Nenhum dado pessoal ou de pagamento é solicitado.</p>
+          <p class="checkout-kicker">Sua seleção</p>
+          <h1>Revise sua seleção</h1>
+          <p>Confira as opções de cálculo para gerar um resumo de exemplo. Não pedimos dados pessoais, endereço ou cartão.</p>
         </header>
-        <p class="checkout-demo-banner"><strong>Ambiente demonstrativo: nenhum pagamento será realizado.</strong> Nenhum pagamento será cobrado nem pedido comercial registrado.</p>
-        <div class="checkout-status" data-checkout-status role="status" aria-live="polite">Carregando catálogo e carrinho demonstrativos…</div>
+        <p class="checkout-demo-banner"><strong>Demonstração — nenhum pagamento será cobrado.</strong> Nenhum pedido comercial será registrado.</p>
+        <div class="checkout-status" data-checkout-status role="status" aria-live="polite">Carregando sua seleção…</div>
 
         <section class="checkout-empty" data-checkout-empty aria-labelledby="checkout-empty-title" hidden>
           <h2 id="checkout-empty-title">Não há itens no carrinho</h2>
-          <p>Adicione itens demonstrativos antes de gerar um resumo.</p>
-          <a class="checkout-button checkout-button--primary" href="./catalogo.html">Explorar o Catálogo</a>
+          <p>Adicione referências ao catálogo para montar um resumo de exemplo.</p>
+          <a class="checkout-button checkout-button--primary" href="./catalogo.html">Explorar o catálogo</a>
         </section>
 
         <section class="checkout-content" data-checkout-content aria-label="Resumo e forma de cálculo" hidden>
           <div class="checkout-layout">
             <section class="checkout-items-panel" aria-labelledby="checkout-items-title">
-              <h2 id="checkout-items-title">Itens demonstrativos</h2>
+              <h2 id="checkout-items-title">Itens da seleção</h2>
               <ul class="checkout-items" data-checkout-items></ul>
               <dl class="checkout-subtotal">
-                <div><dt>Subtotal ilustrativo</dt><dd data-checkout-subtotal>R$ 0,00</dd></div>
+                <div><dt>Subtotal de referência</dt><dd data-checkout-subtotal>R$ 0,00</dd></div>
                 <div><dt>Frete</dt><dd>Não calculado</dd></div>
               </dl>
-              <p class="checkout-muted">Os valores são de demonstração. Não há cotação de frete integrada.</p>
+              <p class="checkout-muted">Os valores são exemplos. A cotação de frete está indisponível até a integração com uma transportadora.</p>
             </section>
 
             <form class="checkout-form" data-checkout-form>
               <fieldset>
-                <legend>Escolha uma simulação de pagamento</legend>
+                <legend>Forma de pagamento ilustrativa</legend>
                 <label class="checkout-choice">
                   <input type="radio" name="paymentMethod" value="pix" checked />
-                  <span><strong>Pix</strong><small>Desconto ilustrativo de 5%; nenhum QR Code será gerado.</small></span>
+                  <span><strong>Pix</strong><small>Desconto de referência de 5%; nenhum QR Code PIX será gerado.</small></span>
                 </label>
                 <label class="checkout-choice">
                   <input type="radio" name="paymentMethod" value="cartao" />
-                  <span><strong>Cartão</strong><small>Parcelamento ilustrativo em 6 vezes; nenhum dado de cartão é solicitado.</small></span>
+                  <span><strong>Cartão</strong><small>Parcelamento de referência em 6 vezes; nenhum dado de cartão é solicitado.</small></span>
                 </label>
               </fieldset>
-              <p class="checkout-muted">A API recalcula os valores usando o catálogo do servidor e recebe somente IDs, quantidades e a opção demonstrativa.</p>
-              <button class="checkout-button checkout-button--primary" type="submit" data-checkout-submit>Gerar resumo demonstrativo</button>
+              <p class="checkout-muted">O servidor confere os itens e recalcula os valores pelo catálogo local. Nenhum dado pessoal é enviado.</p>
+              <button class="checkout-button checkout-button--primary" type="submit" data-checkout-submit>Gerar resumo</button>
               <p class="checkout-error" data-checkout-error role="alert" hidden></p>
             </form>
           </div>
 
           <section class="checkout-result" data-checkout-result aria-labelledby="checkout-result-title" tabindex="-1" hidden>
-            <p class="checkout-kicker">Simulação concluída</p>
-            <h2 id="checkout-result-title">Resumo demonstrativo</h2>
+            <p class="checkout-kicker">Resumo pronto</p>
+            <h2 id="checkout-result-title">Resumo de exemplo</h2>
             <p class="checkout-demo-id">Identificador da simulação: <strong data-checkout-demo-id></strong></p>
             <dl class="checkout-result__values" data-checkout-values></dl>
             <p class="checkout-result__notice" data-checkout-result-message></p>
@@ -103,7 +103,7 @@
         <div class="site-footer__inner">
           <section class="site-footer__brand" aria-label="Loja Xukuru">
             <a class="site-footer__logo" href="./index.html">Loja <span>Xukuru</span></a>
-            <p>Uma proposta demonstrativa para explorar comércio justo e valorização do trabalho artesanal.</p>
+            <p>Uma proposta digital sobre artesanato, cultura e respeito às histórias do povo Xukuru do Ororubá.</p>
           </section>
           <nav class="site-footer__nav" aria-label="Links rápidos">
             <h2>Atalhos</h2>
@@ -122,12 +122,8 @@
             </ul>
             <p class="site-footer__note">O link externo é uma referência de leitura geral, não um endosso comunitário.</p>
           </nav>
-          <aside class="site-footer__notice" aria-label="Limites do protótipo">
-            <p class="site-footer__notice-title">Protótipo demonstrativo</p>
-            <p>Sem venda real. Pagamentos e frete não estão integrados.</p>
-          </aside>
         </div>
-        <div class="site-footer__bottom">Loja Xukuru · MVP demonstrativo</div>
+        <div class="site-footer__bottom">Loja Xukuru · proposta digital</div>
       </footer>
     </div>
     <script type="module" src="/src/js/main.js"></script>

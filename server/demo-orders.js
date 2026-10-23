@@ -73,7 +73,7 @@ export function createDemoSummary(validatedItems, paymentMethod, demoId) {
 
   return {
     demoId,
-    message: 'Resumo demonstrativo gerado. Nenhum pagamento será cobrado e nenhum pedido foi registrado.',
+    message: 'Este resumo é uma simulação. Nenhum pagamento foi cobrado e nenhum pedido foi registrado.',
     items,
     subtotalCents,
     paymentMethod,

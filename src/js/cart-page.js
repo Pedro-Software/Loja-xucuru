@@ -37,24 +37,31 @@ if (page) {
   function makeCartRow(cartItem, product) {
     const article = document.createElement('article');
     article.className = 'cart-item';
+    const visual = document.createElement('figure');
+    visual.className = 'cart-item__visual';
     const image = document.createElement('img');
     image.className = 'cart-item__image';
     image.src = product.image;
     image.alt = '';
+    image.width = 900;
+    image.height = 900;
     image.loading = 'lazy';
+    image.decoding = 'async';
     image.addEventListener('error', () => {
-      const fallback = addText('div', 'shop-image-fallback', 'Imagem demonstrativa');
+      const fallback = addText('div', 'shop-image-fallback', 'Fotografia indisponível');
       fallback.setAttribute('role', 'img');
-      fallback.setAttribute('aria-label', 'Imagem demonstrativa indisponível');
+      fallback.setAttribute('aria-label', 'Fotografia de referência indisponível');
       image.replaceWith(fallback);
     }, { once: true });
+
+    visual.append(image, addText('figcaption', '', product.gallery[0]?.caption || 'Fotografia de referência'));
 
     const details = document.createElement('div');
     details.className = 'cart-item__details';
     const link = addText('a', 'cart-item__name', product.name);
     link.href = `./produto.html?id=${encodeURIComponent(product.id)}`;
-    const category = addText('p', 'shop-muted', `${product.category} · item demonstrativo`);
-    const price = addText('p', 'cart-item__price', `Valor ilustrativo: ${formatBRL(product.price)}`);
+    const category = addText('p', 'shop-muted', `${product.category} · referência visual`);
+    const price = addText('p', 'cart-item__price', `Valor de referência: ${formatBRL(product.price)}`);
     details.append(link, category, price);
 
     const controls = document.createElement('div');
@@ -80,7 +87,7 @@ if (page) {
     increase.addEventListener('click', () => changeQuantity(product.id, cartItem.quantidade + 1));
     quantityControls.append(decrease, quantity, increase);
 
-    const lineTotal = addText('p', 'cart-item__total', `Subtotal do item: ${formatBRL(product.price * cartItem.quantidade)}`);
+    const lineTotal = addText('p', 'cart-item__total', `Subtotal de referência: ${formatBRL(product.price * cartItem.quantidade)}`);
     const remove = addText('button', 'shop-text-button', `Remover ${product.name}`);
     remove.type = 'button';
     remove.addEventListener('click', () => {
@@ -92,7 +99,7 @@ if (page) {
       }
     });
     controls.append(quantityLabel, quantityControls, lineTotal, remove);
-    article.append(image, details, controls);
+    article.append(visual, details, controls);
     return article;
   }
 
@@ -160,7 +167,7 @@ if (page) {
       return;
     }
     cepInput.removeAttribute('aria-invalid');
-    cepMessage.textContent = 'Cotação de frete ainda não disponível.';
+    cepMessage.textContent = 'Cotação de frete indisponível até integração com transportadora.';
   });
 
   clearButton.addEventListener('click', () => {
@@ -173,7 +180,7 @@ if (page) {
   });
 
   async function initialize() {
-    statusMessage('Carregando carrinho e catálogo demonstrativos.');
+    statusMessage('Carregando sua sacola.');
     try {
       products = await loadProducts();
       render();

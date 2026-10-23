@@ -333,9 +333,10 @@
   padding: 0.45rem 0.65rem;
   background: rgba(249, 246, 240, 0.94);
   color: #514741;
-  font-size: 0.67rem;
-  letter-spacing: 0.14em;
-  text-align: center;
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  text-align: left;
   text-transform: uppercase;
 }
 
