@@ -25,6 +25,7 @@ export default defineConfig({
         checkout: resolve(projectRoot, 'checkout.html'),
         sobre: resolve(projectRoot, 'sobre.html'),
         historia: resolve(projectRoot, 'historia.html'),
+        creditosFotograficos: resolve(projectRoot, 'creditos-fotograficos.html'),
       },
     },
   },

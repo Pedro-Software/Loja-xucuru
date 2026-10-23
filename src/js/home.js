@@ -63,7 +63,7 @@ if (page) {
     const content = document.createElement('div');
     content.className = 'home-card__content';
     content.append(
-      textElement('span', 'home-card__category', product.category),
+      textElement('span', 'home-card__category', `Tema de pesquisa · ${product.category}`),
       textElement('strong', 'home-card__name', product.name),
       textElement('span', 'home-card__price-label', 'Valor de referência'),
       textElement('span', 'home-card__price', formatBRL(product.price)),
@@ -92,7 +92,7 @@ if (page) {
     const link = document.createElement('a');
     link.className = 'home-category-card';
     link.href = `./catalogo.html?categoria=${encodeURIComponent(categorySlug(category))}`;
-    link.setAttribute('aria-label', `Explorar a categoria ${category}`);
+    link.setAttribute('aria-label', `Explorar o tema de pesquisa ${category}`);
 
     const figure = document.createElement('figure');
     figure.className = 'home-category-card__figure';
@@ -114,7 +114,7 @@ if (page) {
     const copy = document.createElement('span');
     copy.className = 'home-category-card__copy';
     copy.append(
-      textElement('span', 'home-category-card__eyebrow', 'Explorar categoria'),
+      textElement('span', 'home-category-card__eyebrow', 'Tema de pesquisa'),
       textElement('strong', 'home-category-card__name', category),
       textElement('span', 'home-category-card__arrow', '→'),
     );

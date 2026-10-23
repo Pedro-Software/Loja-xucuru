@@ -4,7 +4,7 @@
 
 A interface segue a proposta editorial em mosaico escolhida para a Home: composição em duas colunas no hero, título serifado, quatro destaques e uma faixa institucional verde. O projeto identifica itens e valores como demonstrativos e não afirma autoria, procedência, parceria ou operação comercial. A marca permanece provisoriamente “Loja Xukuru”.
 
-Não há fotografias autorizadas no projeto. O único recurso visual de produto é `public/images/placeholder-demonstrativo.svg`, uma composição geométrica local que declara não representar um produto real. Não usar símbolos culturais inventados, retratos sem autorização nem imagens remotas sem licença confirmada.
+O hero usa uma foto documental licenciada da placa da Aldeia Santana (`public/images/xukuru/territorio/aldeia-santana.webp`), com crédito e contexto visíveis. Nenhuma foto de produto foi autenticada e liberada para reutilização: o catálogo usa `public/images/xukuru/produtos/foto-autorizada-pendente.svg`, um marcador neutro. Créditos completos e pendências estão em `creditos-fotograficos.html` e `docs/FONTES_IMAGENS.md`.
 
 ## Tokens
 
@@ -30,14 +30,14 @@ Não há fotografias autorizadas no projeto. O único recurso visual de produto 
 - O foco usa contorno visível de alto contraste; no rodapé escuro, o contorno muda para areia.
 - O link “Pular para o conteúdo” aparece ao receber foco. O menu móvel expõe `aria-expanded`, fecha com Escape e continua navegável sem JavaScript.
 - Busca e quantidade têm rótulos; contagem, carregamento, erros e inclusão no carrinho são anunciados por regiões acessíveis.
-- Imagens geométricas são decorativas quando o texto ao redor já identifica o item; falhas de imagem exibem alternativa local e compreensível.
+- O marcador de produto informa que a fotografia autorizada está pendente; o texto alternativo deixa claro que ele não representa uma peça real.
 - Os controles principais têm área mínima aproximada de 44 px. As transições de botões e cards respeitam `prefers-reduced-motion`.
 
 ## Desempenho de mídia
 
-- A arte principal usa o SVG geométrico local existente e recebe prioridade de carregamento; miniaturas dos cards usam carregamento tardio e decodificação assíncrona.
+- A foto territorial local WebP tem 960 × 720 px e cerca de 105 KB; recebe prioridade de carregamento. Os marcadores SVG dos cards são locais, sem dependência de serviços externos.
 - O projeto usa Georgia e fontes sans-serif do sistema, sem requisições de fontes externas.
-- Fotografias autorizadas ainda não foram fornecidas; o placeholder é intencional e não representa uma peça real.
+- Fotografias autorizadas de produtos ainda não foram fornecidas; o marcador é intencional e não representa uma peça real.
 
 ## Superfícies
 

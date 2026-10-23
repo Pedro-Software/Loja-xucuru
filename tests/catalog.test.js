@@ -11,14 +11,16 @@ const dataPath = new URL('../public/data/produtos.json', import.meta.url);
 const productData = JSON.parse(readFileSync(dataPath, 'utf8'));
 const products = validateProducts(productData);
 const projectRoot = fileURLToPath(new URL('..', import.meta.url));
-const imageCreditsPath = resolve(projectRoot, 'docs', 'IMAGENS.md');
+const imageCreditsPath = resolve(projectRoot, 'docs', 'FONTES_IMAGENS.md');
 
 test('o JSON tem oito itens de referência válidos e galerias locais', () => {
   assert.equal(products.length, 8);
   assert.equal(new Set(products.map((product) => product.id)).size, 8);
   assert.ok(products.every((product) => product.demonstrative && product.availableForDemo));
   assert.ok(products.every((product) => product.materials.length === 0));
-  assert.ok(products.every((product) => product.imageAlt && product.visualNote && product.gallery.length >= 2));
+  assert.ok(products.every((product) => product.imageAlt && product.visualNote && product.gallery.length === 1));
+  assert.ok(products.every((product) => product.name.startsWith('Referência demonstrativa')));
+  assert.ok(products.every((product) => product.image === '/images/xukuru/produtos/foto-autorizada-pendente.svg'));
   assert.ok(existsSync(imageCreditsPath), 'a documentação de fontes e licenças precisa existir');
   const imageCredits = readFileSync(imageCreditsPath, 'utf8');
   assert.ok(

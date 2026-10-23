@@ -107,7 +107,7 @@ if (page) {
 
     const copy = makeElement('div', 'related-card__copy');
     copy.append(
-      makeElement('span', 'related-card__category', product.category),
+      makeElement('span', 'related-card__category', `Tema de pesquisa · ${product.category}`),
       makeElement('strong', 'related-card__name', product.name),
       makeElement('span', 'related-card__price', `Valor de referência · ${formatBRL(product.price)}`),
       makeElement('span', 'related-card__credit', product.gallery[0]?.caption || 'Fotografia de referência'),
@@ -127,7 +127,7 @@ if (page) {
 
   function showProduct(product) {
     selectedProduct = product;
-    page.querySelector('[data-product-category]').textContent = `${product.category} · referência visual`;
+    page.querySelector('[data-product-category]').textContent = `Tema de pesquisa · ${product.category}`;
     page.querySelector('[data-product-name]').textContent = product.name;
     page.querySelector('[data-product-description]').textContent = product.description;
     page.querySelector('[data-product-visual-note]').textContent = product.visualNote;

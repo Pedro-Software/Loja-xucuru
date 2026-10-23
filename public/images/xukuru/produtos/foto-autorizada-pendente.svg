@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 400" role="img" aria-labelledby="title desc">
+  <title id="title">Fotografia autorizada pendente</title>
+  <desc id="desc">Marcador neutro que informa que ainda não foi fornecida uma fotografia autorizada de produto.</desc>
+  <rect width="540" height="400" fill="#F1EAE0"/>
+  <rect x="165" y="78" width="210" height="150" rx="3" fill="none" stroke="#1F3E2B" stroke-width="5"/>
+  <circle cx="224" cy="126" r="14" fill="none" stroke="#1F3E2B" stroke-width="5"/>
+  <path d="m179 210 54-50 34 30 31-25 62 45" fill="none" stroke="#1F3E2B" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <path d="M205 264h130" stroke="#C45A35" stroke-width="3"/>
+  <text x="270" y="300" fill="#2B231F" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="1.1" text-anchor="middle">FOTOGRAFIA PENDENTE</text>
+  <text x="270" y="328" fill="#514740" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">Aguardando autorização</text>
+</svg>

@@ -28,7 +28,7 @@ Site multipágina com início, catálogo, detalhe de produto, carrinho, checkout
 
 ## Capabilities and Constraints
 
-- O estágio atual contém as sete entradas HTML e navegação básica.
+- O estágio atual contém as sete páginas da loja e uma página de créditos fotográficos.
 - Produtos de exemplo devem ser identificados como demonstrativos e não podem atribuir autoria, comunidade, materiais ou procedência sem confirmação.
 - O protótipo não processa pagamentos nem calcula frete; o checkout demonstrativo não deve solicitar dados pessoais ou de cartão.
 - Imagens reais de produtos ou pessoas dependem de autorização e verificação. Nenhum símbolo sagrado ou adorno cultural inventado pode ser usado.
@@ -42,7 +42,7 @@ Site multipágina com início, catálogo, detalhe de produto, carrinho, checkout
 
 ## Evidence on Hand
 
-O briefing está em `docs/BRIEFING.md` e `docs/briefing-original.docx`; as restrições do projeto estão em `AGENTS.md`. Ainda não há fotografias autorizadas, cadastro de produtos verificados, confirmação de autoria/procedência, depoimentos ou evidência de parceria e distribuição de receitas. Esses itens não devem ser inventados.
+O briefing está em `docs/BRIEFING.md` e `docs/briefing-original.docx`; as restrições do projeto estão em `AGENTS.md`. Há uma fotografia territorial licenciada da placa da Aldeia Santana, mas ainda não há fotografias autorizadas de produtos, cadastro de produtos verificados, confirmação de autoria/procedência, depoimentos ou evidência de parceria e distribuição de receitas. Esses itens não devem ser inventados. Consulte `docs/FONTES_IMAGENS.md` para créditos e pendências.
 
 ## Product Principles
 

@@ -1,18 +1,21 @@
 [
   {
     "id": "demo-peca-01",
-    "name": "Tigelas de cerâmica clara",
+    "name": "Referência demonstrativa 01",
     "category": "Cerâmica",
-    "description": "Três tigelas em tons claros compõem esta referência para a categoria cerâmica. A fotografia não representa uma peça à venda nem confirma autoria ou procedência de produção Xukuru.",
+    "description": "Ficha demonstrativa. Tema de pesquisa: Cerâmica. Não identifica uma peça real, não confirma vínculo com a produção Xukuru e não indica disponibilidade comercial.",
     "price": 68,
     "materials": [],
     "materialsStatus": "Informação a confirmar",
-    "image": "/images/products/ceramic-bowls-pastel.jpg",
-    "imageAlt": "Três tigelas de cerâmica em tons claros sobre uma superfície neutra.",
-    "visualNote": "Fotografia de referência independente; a peça e o valor são exemplos de navegação, sem vínculo com a produção Xukuru.",
+    "image": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+    "imageAlt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+    "visualNote": "Marcador neutro de imagem de referência. Fotografia, peça, autoria e procedência aguardam confirmação e autorização.",
     "gallery": [
-      { "src": "/images/products/ceramic-bowls-pastel.jpg", "alt": "Três tigelas de cerâmica em tons claros sobre uma superfície neutra.", "caption": "Foto: Superkitina · Unsplash" },
-      { "src": "/images/products/ceramic-bowls-white.jpg", "alt": "Cinco tigelas brancas de cerâmica dispostas sobre uma mesa clara.", "caption": "Foto: Tom Crew · Unsplash" }
+      {
+        "src": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+        "alt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+        "caption": "Fotografia autorizada da peça ainda não fornecida."
+      }
     ],
     "featured": true,
     "demonstrative": true,
@@ -21,18 +24,21 @@
   },
   {
     "id": "demo-peca-02",
-    "name": "Tigelas brancas de cerâmica",
+    "name": "Referência demonstrativa 02",
     "category": "Cerâmica",
-    "description": "A composição apresenta volumes simples em uma paleta clara. A fotografia é referência independente, sem relação com peças à venda ou produção Xukuru.",
+    "description": "Ficha demonstrativa. Tema de pesquisa: Cerâmica. Não identifica uma peça real, não confirma vínculo com a produção Xukuru e não indica disponibilidade comercial.",
     "price": 94.5,
     "materials": [],
     "materialsStatus": "Informação a confirmar",
-    "image": "/images/products/ceramic-bowls-white.jpg",
-    "imageAlt": "Tigelas brancas de cerâmica organizadas sobre uma superfície clara.",
-    "visualNote": "Fotografia de referência independente; a peça e o valor são exemplos de navegação, sem vínculo com a produção Xukuru.",
+    "image": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+    "imageAlt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+    "visualNote": "Marcador neutro de imagem de referência. Fotografia, peça, autoria e procedência aguardam confirmação e autorização.",
     "gallery": [
-      { "src": "/images/products/ceramic-bowls-white.jpg", "alt": "Tigelas brancas de cerâmica organizadas sobre uma superfície clara.", "caption": "Foto: Tom Crew · Unsplash" },
-      { "src": "/images/products/ceramic-bowls-pastel.jpg", "alt": "Três tigelas de cerâmica em tons claros sobre uma superfície neutra.", "caption": "Foto: Superkitina · Unsplash" }
+      {
+        "src": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+        "alt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+        "caption": "Fotografia autorizada da peça ainda não fornecida."
+      }
     ],
     "featured": false,
     "demonstrative": true,
@@ -41,18 +47,21 @@
   },
   {
     "id": "demo-peca-03",
-    "name": "Trama de cesto",
+    "name": "Referência demonstrativa 03",
     "category": "Trançados",
-    "description": "Referência visual em detalhe da trama de um cesto. A foto não confirma materiais, autoria ou procedência de qualquer peça Xukuru.",
+    "description": "Ficha demonstrativa. Tema de pesquisa: Trançados. Não identifica uma peça real, não confirma vínculo com a produção Xukuru e não indica disponibilidade comercial.",
     "price": 72,
     "materials": [],
     "materialsStatus": "Informação a confirmar",
-    "image": "/images/products/basket-weave-detail.jpg",
-    "imageAlt": "Vista aproximada de diferentes tramas em cestos.",
-    "visualNote": "Fotografia de referência independente; a peça e o valor são exemplos de navegação, sem vínculo com a produção Xukuru.",
+    "image": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+    "imageAlt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+    "visualNote": "Marcador neutro de imagem de referência. Fotografia, peça, autoria e procedência aguardam confirmação e autorização.",
     "gallery": [
-      { "src": "/images/products/basket-weave-detail.jpg", "alt": "Vista aproximada de diferentes tramas em cestos.", "caption": "Foto: Daethlc · CC BY-SA 4.0" },
-      { "src": "/images/products/woven-basket.jpg", "alt": "Cesto trançado claro com alças vermelhas, fotografado sobre fundo branco.", "caption": "Woven Basket 03 · Wikimedia Commons · CC0 1.0" }
+      {
+        "src": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+        "alt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+        "caption": "Fotografia autorizada da peça ainda não fornecida."
+      }
     ],
     "featured": true,
     "demonstrative": true,
@@ -61,18 +70,21 @@
   },
   {
     "id": "demo-peca-04",
-    "name": "Cesto trançado com alças",
+    "name": "Referência demonstrativa 04",
     "category": "Trançados",
-    "description": "Referência visual de um cesto com alças largas sobre fundo claro. A fotografia não representa um item disponível para compra.",
+    "description": "Ficha demonstrativa. Tema de pesquisa: Trançados. Não identifica uma peça real, não confirma vínculo com a produção Xukuru e não indica disponibilidade comercial.",
     "price": 118,
     "materials": [],
     "materialsStatus": "Informação a confirmar",
-    "image": "/images/products/woven-basket.jpg",
-    "imageAlt": "Cesto trançado claro com alças vermelhas, fotografado sobre fundo branco.",
-    "visualNote": "Fotografia de referência independente; a peça e o valor são exemplos de navegação, sem vínculo com a produção Xukuru.",
+    "image": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+    "imageAlt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+    "visualNote": "Marcador neutro de imagem de referência. Fotografia, peça, autoria e procedência aguardam confirmação e autorização.",
     "gallery": [
-      { "src": "/images/products/woven-basket.jpg", "alt": "Cesto trançado claro com alças vermelhas, fotografado sobre fundo branco.", "caption": "Woven Basket 03 · Wikimedia Commons · CC0 1.0" },
-      { "src": "/images/products/basket-weave-detail.jpg", "alt": "Vista aproximada de diferentes tramas em cestos.", "caption": "Foto: Daethlc · CC BY-SA 4.0" }
+      {
+        "src": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+        "alt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+        "caption": "Fotografia autorizada da peça ainda não fornecida."
+      }
     ],
     "featured": false,
     "demonstrative": true,
@@ -81,18 +93,21 @@
   },
   {
     "id": "demo-peca-05",
-    "name": "Brincos em madeira",
+    "name": "Referência demonstrativa 05",
     "category": "Adornos",
-    "description": "Referência visual de brincos com formas recortadas. A imagem não confirma materiais, autoria ou vínculo com a produção Xukuru.",
+    "description": "Ficha demonstrativa. Tema de pesquisa: Adornos. Não identifica uma peça real, não confirma vínculo com a produção Xukuru e não indica disponibilidade comercial.",
     "price": 49,
     "materials": [],
     "materialsStatus": "Informação a confirmar",
-    "image": "/images/products/wood-earrings-unsplash.jpg",
-    "imageAlt": "Conjunto de brincos de madeira recortada com diferentes formas decorativas.",
-    "visualNote": "Fotografia de referência independente; a peça e o valor são exemplos de navegação, sem vínculo com a produção Xukuru.",
+    "image": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+    "imageAlt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+    "visualNote": "Marcador neutro de imagem de referência. Fotografia, peça, autoria e procedência aguardam confirmação e autorização.",
     "gallery": [
-      { "src": "/images/products/wood-earrings-unsplash.jpg", "alt": "Conjunto de brincos de madeira recortada com diferentes formas decorativas.", "caption": "Foto: Valentina Vehkalahti · Unsplash" },
-      { "src": "/images/products/pearl-silver-earrings.jpg", "alt": "Brincos com pérolas em tons escuros e claros, dispostos em uma linha.", "caption": "Foto: W. Carter · CC BY 4.0" }
+      {
+        "src": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+        "alt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+        "caption": "Fotografia autorizada da peça ainda não fornecida."
+      }
     ],
     "featured": true,
     "demonstrative": true,
@@ -101,18 +116,21 @@
   },
   {
     "id": "demo-peca-06",
-    "name": "Brincos com pérolas",
+    "name": "Referência demonstrativa 06",
     "category": "Adornos",
-    "description": "A fotografia reúne brincos com pérolas em tons variados. É uma referência independente e não confirma materiais, origem ou autoria de peças Xukuru.",
+    "description": "Ficha demonstrativa. Tema de pesquisa: Adornos. Não identifica uma peça real, não confirma vínculo com a produção Xukuru e não indica disponibilidade comercial.",
     "price": 87,
     "materials": [],
     "materialsStatus": "Informação a confirmar",
-    "image": "/images/products/pearl-silver-earrings.jpg",
-    "imageAlt": "Brincos com pérolas em tons escuros e claros, dispostos em uma linha.",
-    "visualNote": "Fotografia de referência independente; a peça e o valor são exemplos de navegação, sem vínculo com a produção Xukuru.",
+    "image": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+    "imageAlt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+    "visualNote": "Marcador neutro de imagem de referência. Fotografia, peça, autoria e procedência aguardam confirmação e autorização.",
     "gallery": [
-      { "src": "/images/products/pearl-silver-earrings.jpg", "alt": "Brincos com pérolas em tons escuros e claros, dispostos em uma linha.", "caption": "Foto: W. Carter · CC BY 4.0" },
-      { "src": "/images/products/wood-earrings-unsplash.jpg", "alt": "Conjunto de brincos de madeira recortada com diferentes formas decorativas.", "caption": "Foto: Valentina Vehkalahti · Unsplash" }
+      {
+        "src": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+        "alt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+        "caption": "Fotografia autorizada da peça ainda não fornecida."
+      }
     ],
     "featured": false,
     "demonstrative": true,
@@ -121,18 +139,21 @@
   },
   {
     "id": "demo-peca-07",
-    "name": "Escultura de águia em madeira",
+    "name": "Referência demonstrativa 07",
     "category": "Esculturas",
-    "description": "Referência visual de uma escultura de águia em madeira. A imagem não é produto anunciado nem confirma materiais, origem ou autoria Xukuru.",
+    "description": "Ficha demonstrativa. Tema de pesquisa: Esculturas. Não identifica uma peça real, não confirma vínculo com a produção Xukuru e não indica disponibilidade comercial.",
     "price": 145,
     "materials": [],
     "materialsStatus": "Informação a confirmar",
-    "image": "/images/products/wood-bird-sculpture-unsplash.jpg",
-    "imageAlt": "Escultura de águia entalhada em madeira sobre um tronco em ambiente arborizado.",
-    "visualNote": "Fotografia de referência independente; a peça e o valor são exemplos de navegação, sem vínculo com a produção Xukuru.",
+    "image": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+    "imageAlt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+    "visualNote": "Marcador neutro de imagem de referência. Fotografia, peça, autoria e procedência aguardam confirmação e autorização.",
     "gallery": [
-      { "src": "/images/products/wood-bird-sculpture-unsplash.jpg", "alt": "Escultura de águia entalhada em madeira sobre um tronco em ambiente arborizado.", "caption": "Foto: Haberdoedas · Unsplash" },
-      { "src": "/images/products/wooden-bird-sculptures.jpg", "alt": "Pequenas esculturas de aves em madeira dispostas em uma prateleira diante de uma janela.", "caption": "Foto: Enda012 · CC BY 4.0" }
+      {
+        "src": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+        "alt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+        "caption": "Fotografia autorizada da peça ainda não fornecida."
+      }
     ],
     "featured": false,
     "demonstrative": true,
@@ -141,18 +162,21 @@
   },
   {
     "id": "demo-peca-08",
-    "name": "Aves esculpidas em madeira",
+    "name": "Referência demonstrativa 08",
     "category": "Esculturas",
-    "description": "Referência visual de pequenas esculturas de aves em uma prateleira. A fotografia não corresponde a peças disponíveis para venda.",
+    "description": "Ficha demonstrativa. Tema de pesquisa: Esculturas. Não identifica uma peça real, não confirma vínculo com a produção Xukuru e não indica disponibilidade comercial.",
     "price": 109,
     "materials": [],
     "materialsStatus": "Informação a confirmar",
-    "image": "/images/products/wooden-bird-sculptures.jpg",
-    "imageAlt": "Pequenas esculturas de aves em madeira dispostas em uma prateleira diante de uma janela.",
-    "visualNote": "Fotografia de referência independente; a peça e o valor são exemplos de navegação, sem vínculo com a produção Xukuru.",
+    "image": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+    "imageAlt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+    "visualNote": "Marcador neutro de imagem de referência. Fotografia, peça, autoria e procedência aguardam confirmação e autorização.",
     "gallery": [
-      { "src": "/images/products/wooden-bird-sculptures.jpg", "alt": "Pequenas esculturas de aves em madeira dispostas em uma prateleira diante de uma janela.", "caption": "Foto: Enda012 · CC BY 4.0" },
-      { "src": "/images/products/wood-bird-sculpture-unsplash.jpg", "alt": "Escultura de águia entalhada em madeira sobre um tronco em ambiente arborizado.", "caption": "Foto: Haberdoedas · Unsplash" }
+      {
+        "src": "/images/xukuru/produtos/foto-autorizada-pendente.svg",
+        "alt": "Marcador neutro: fotografia autorizada da peça ainda não fornecida; não representa um produto real.",
+        "caption": "Fotografia autorizada da peça ainda não fornecida."
+      }
     ],
     "featured": true,
     "demonstrative": true,

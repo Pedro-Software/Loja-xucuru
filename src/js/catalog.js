@@ -102,7 +102,7 @@ if (form && grid && status && resultCount) {
     figure.append(image, imageCaption, demoBadge);
 
     const content = createText('div', 'catalog-card__content');
-    const category = createText('p', 'catalog-card__category', product.category);
+    const category = createText('p', 'catalog-card__category', `Tema de pesquisa · ${product.category}`);
     const name = createText('h3', 'catalog-card__name', product.name);
     const description = createText('p', 'catalog-card__description', product.description);
     const details = createText('div', 'catalog-card__details');

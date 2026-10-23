@@ -42,6 +42,7 @@ O checkout demonstrativo está em `http://127.0.0.1:5173/checkout.html`.
 - `/carrinho.html` — quantidades, subtotal e validação de formato do CEP.
 - `/checkout.html` — resumo de pagamento demonstrativo.
 - `/sobre.html` e `/historia.html` — propósito e contextualização editorial.
+- `/creditos-fotograficos.html` — autoria, fonte, licença e pendências do acervo de imagens.
 
 ## Testes e build
 
@@ -51,7 +52,7 @@ npm run build
 npm run preview
 ```
 
-`npm test` usa o test runner nativo do Node.js. Os testes cobrem a fonte única de produtos, filtros e ordenação, persistência e cálculos do carrinho, validação e cálculos da API, conteúdo prudente e links internos. `npm run build` gera as sete páginas em `dist/`; `npm run preview` serve esse build localmente.
+`npm test` usa o test runner nativo do Node.js. Os testes cobrem a fonte única de produtos, filtros e ordenação, persistência e cálculos do carrinho, validação e cálculos da API, conteúdo prudente e links internos. `npm run build` gera as oito páginas em `dist/`; `npm run preview` serve esse build localmente.
 
 ## Arquitetura
 
@@ -59,7 +60,10 @@ npm run preview
 - `src/js/`: módulos ES do catálogo, detalhe, carrinho, checkout e layout compartilhado.
 - `src/css/`: estilos compartilhados e específicos de cada superfície; Tailwind CSS 4 é processado pelo plugin `@tailwindcss/vite`, sem CDN.
 - `public/data/produtos.json`: fonte única dos oito itens demonstrativos, usada pela interface e pela API.
-- `public/images/products/` e `public/images/editorial/`: fotografias locais de referência para catálogo, Home, Sobre e História.
+- `public/images/xukuru/territorio/`: fotografia local da placa da Aldeia Santana, com crédito e licença publicados.
+- `public/images/xukuru/produtos/`: marcador neutro; fotografias de produto aguardam autorização e verificação.
+- `creditos-fotograficos.html`: crédito acessível pelo rodapé e informação de uso da fotografia territorial.
+- `docs/FONTES_IMAGENS.md`: fontes, licenças, imagens descartadas e pendências do acervo.
 - `docs/IMAGENS.md`: fontes, créditos e licenças das fotografias utilizadas.
 - `public/images/placeholder-demonstrativo.svg`: arquivo legado preservado; não é exibido no site.
 - `server/`: endpoints Express, validação de CEP e validação/cálculo do resumo no servidor.
